@@ -1,0 +1,4 @@
+## Créditos
+- magiskboot : https://github.com/topjohnwu/Magisk
+- make_ext4fs : https://github.com/superr/make_ext4fs
+- busybox : https://busybox.net/
