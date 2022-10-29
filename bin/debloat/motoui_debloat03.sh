@@ -22,7 +22,6 @@ rm -rf product/etc/default-permissions/default-permissions-co.sitic.pp.xml
 rm -rf product/etc/default-permissions/default-permissions-com.claroColombia.contenedor.xml
 rm -rf product/etc/default-permissions/default-permissions-com.google.android.wfcactivation.xml
 rm -rf product/etc/default-permissions/default-permissions-com.telcel.contenedor.xml
-rm -rf product/etc/enable-disable-packages
 rm -rf product/etc/enable-disable-packages/enable-disable-com.amazon.appmanager.mdip.xml
 rm -rf product/etc/enable-disable-packages/enable-disable-com.android.contacts.xml
 rm -rf product/etc/enable-disable-packages/enable-disable-com.claroColombia.contenedor.xml
