@@ -1,4 +1,3 @@
-rm -rf product/app
 rm -rf product/app/DeskClockGoogle
 rm -rf product/app/DeskClockGoogle/DeskClockGoogle.apk
 rm -rf product/app/DeskClockGoogle/oat
