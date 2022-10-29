@@ -526,7 +526,6 @@ rm -rf system_ext/etc/permissions/privapp-permissions-com.motorola.livewallpaper
 rm -rf system_ext/etc/permissions/privapp-permissions-com.motorola.paks.xml
 rm -rf system_ext/etc/permissions/privapp-permissions-com.motorola.spectrum.setup.extensions.xml
 rm -rf system_ext/etc/permissions/privapp-permissions-com.summit.motorola.rcs.xml
-rm -rf system_ext/etc/sysconfig
 rm -rf system_ext/etc/sysconfig/com.motorola.paks.powersave.xml
 rm -rf system_ext/etc/sysconfig/com.summit.motorola.rcs.powersave.xml
 rm -rf system_ext/etc/sysconfig/hiddenapi-allowlist-com.motorola.paks.xml
