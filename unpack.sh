@@ -234,7 +234,7 @@ echo " "
 
 echo "- Repacking system.."
 date=`date +%Y%m%d`
-size1=`du -sb $editor/system | cut -f1 | awk '{$1=int($1*1.01);printf $1}'`
+size1=`du -sb $editor/system | cut -f1 | awk '{$1=int($1*1.05);printf $1}'`
 $bin/make_ext4fs -J -T -1 -S $editor/config/system/system_file_contexts -C $editor/config/system/system_fs_config -l $size1 -a system $tmp/MotoUI-AB-12-$date-CRYZUEZIN.img $editor/system
 echo "system size = $size1"
 
