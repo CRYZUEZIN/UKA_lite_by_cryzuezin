@@ -33,6 +33,19 @@ echo " "
 echo "Note: Remember that Ports works on Android 12 (Not on Android 12.1)"
 echo " "
 
+sudo (){ sh "$1" ; }
+
+case $1 in
+--unpack | unpack | unpack | u)
+sudo $uka/unpack.sh
+;;
+--clear | clear | clear.sh | c)
+sudo $uka/clear.sh
+;;
+*) cd $uka ;su;
+;;
+esac
+
 if [ -f $ajax/*.xml.zip ]; then
 # MotoUI Global (12.0)
 echo "- Detected Model: Motorola"
