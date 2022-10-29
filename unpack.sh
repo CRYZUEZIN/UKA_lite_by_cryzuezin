@@ -18,13 +18,11 @@ mkdir -p $tmp
 mkdir -p $editor
 
 clear
-echo -en "\E[32;1m"
 echo "      -------------------------"
 echo "      UKA Lite by CRYZUEZIN:"
 echo "      version 5.15"
 echo "      English Translated"
 echo "      -------------------------"
-echo -en "\E[37;1m"
 echo " "
 echo "Tool to port systems for Motorola!"
 echo " "
