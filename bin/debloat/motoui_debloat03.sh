@@ -4,6 +4,18 @@ rm -rf product/app/DeskClockGoogle/oat
 rm -rf product/app/DeskClockGoogle/oat/arm64
 rm -rf product/app/DeskClockGoogle/oat/arm64/DeskClockGoogle.odex
 rm -rf product/app/DeskClockGoogle/oat/arm64/DeskClockGoogle.vdex
+rm -rf product/app/GoogleContacts
+rm -rf product/app/GoogleContacts/GoogleContacts.apk
+rm -rf product/app/GoogleContacts/oat
+rm -rf product/app/GoogleContacts/oat/arm64
+rm -rf product/app/GoogleContacts/oat/arm64/GoogleContacts.odex
+rm -rf product/app/GoogleContacts/oat/arm64/GoogleContacts.vdex
+rm -rf product/app/GoogleContactsSyncAdapter
+rm -rf product/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk
+rm -rf product/app/GoogleContactsSyncAdapter/oat
+rm -rf product/app/GoogleContactsSyncAdapter/oat/arm64
+rm -rf product/app/GoogleContactsSyncAdapter/oat/arm64/GoogleContactsSyncAdapter.odex
+rm -rf product/app/GoogleContactsSyncAdapter/oat/arm64/GoogleContactsSyncAdapter.vdex
 rm -rf product/app/GoogleLocationHistory
 rm -rf product/app/GoogleLocationHistory/GoogleLocationHistory.apk
 rm -rf product/app/GoogleLocationHistory/oat
@@ -22,6 +34,7 @@ rm -rf product/etc/default-permissions/default-permissions-co.sitic.pp.xml
 rm -rf product/etc/default-permissions/default-permissions-com.claroColombia.contenedor.xml
 rm -rf product/etc/default-permissions/default-permissions-com.google.android.wfcactivation.xml
 rm -rf product/etc/default-permissions/default-permissions-com.telcel.contenedor.xml
+rm -rf product/etc/enable-disable-packages
 rm -rf product/etc/enable-disable-packages/enable-disable-com.amazon.appmanager.mdip.xml
 rm -rf product/etc/enable-disable-packages/enable-disable-com.android.contacts.xml
 rm -rf product/etc/enable-disable-packages/enable-disable-com.claroColombia.contenedor.xml
@@ -420,7 +433,6 @@ rm -rf product/priv-app/Vowifi/oat
 rm -rf product/priv-app/Vowifi/oat/arm64
 rm -rf product/priv-app/Vowifi/oat/arm64/Vowifi.odex
 rm -rf product/priv-app/Vowifi/oat/arm64/Vowifi.vdex
-rm -rf product/usr/share/ime/google/d3_lms
 rm -rf product/usr/share/ime/google/d3_lms/ko_2018032602.zip
 rm -rf product/usr/share/ime/google/d3_lms/mozc.data
 rm -rf product/usr/share/ime/google/d3_lms/zh_CN_2018030706.zip
@@ -508,7 +520,6 @@ rm -rf system_ext/app/uceShimService/oat/arm64
 rm -rf system_ext/app/uceShimService/oat/arm64/uceShimService.odex
 rm -rf system_ext/app/uceShimService/oat/arm64/uceShimService.vdex
 rm -rf system_ext/app/uceShimService/uceShimService.apk
-rm -rf system_ext/etc/enable-disable-packages
 rm -rf system_ext/etc/enable-disable-packages/enable-disable-com.motorola.spectrum.setup.extensions.xml
 rm -rf system_ext/etc/filter-system-apps/filter-SummitRcs.xml
 rm -rf system_ext/etc/nondisable/com.motorola.android.fota.xml
@@ -537,7 +548,6 @@ rm -rf system_ext/framework/oat/arm/com.motorola.ims.cmadaptor.odex
 rm -rf system_ext/framework/oat/arm/com.motorola.ims.cmadaptor.vdex
 rm -rf system_ext/framework/oat/arm/vendor.qti.hardware.alarm-V1.0-java.odex
 rm -rf system_ext/framework/oat/arm/vendor.qti.hardware.alarm-V1.0-java.vdex
-rm -rf system_ext/framework/oat/arm64
 rm -rf system_ext/framework/oat/arm64/com.motorola.ims.cmadaptor.odex
 rm -rf system_ext/framework/oat/arm64/com.motorola.ims.cmadaptor.vdex
 rm -rf system_ext/framework/oat/arm64/vendor.qti.hardware.alarm-V1.0-java.odex
