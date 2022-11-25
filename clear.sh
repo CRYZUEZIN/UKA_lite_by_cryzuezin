@@ -1,14 +1,14 @@
 #!/system/bin/sh
 
 #PATH
-uka=`pwd`
+uka=/data/local/uka-lite
 #functions
 chmod -R 755 $uka
 clear
 echo -en "\E[32;1m"
 echo "      -------------------------"
 echo "      UKA Lite by CRYZUEZIN:"
-echo "      version 5.15"
+echo "      version 5.16"
 echo "      English Translated"
 echo "      -------------------------"
 echo "       Cleanup "

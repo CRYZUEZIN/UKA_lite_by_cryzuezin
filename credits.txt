@@ -1,4 +1,5 @@
-## Créditos
-- magiskboot : https://github.com/topjohnwu/Magisk
-- make_ext4fs : https://github.com/superr/make_ext4fs
-- busybox : https://busybox.net/
+Contributions and Credits:
+
+Erfan Abdi: https://github.com/erfanoabdi
+
+Pierre-Hugues HUSSON: https://github.com/phhusson
