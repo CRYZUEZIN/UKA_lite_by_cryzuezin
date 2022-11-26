@@ -23,7 +23,7 @@ mv $ajax/*.xml.zip $ajax/*.xml
 echo " "
 
 echo "- Extracting ZIP.."
-$bin/unzip -o $ajax/*.xml -d $tmp
+unzip -o $ajax/*.xml -d $tmp
 echo " "
 
 echo "- Conversion sparsechunk.* to super.img.."

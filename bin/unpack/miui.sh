@@ -22,7 +22,7 @@ mv $ajax/*.0.zip $ajax/*.0
 echo " "
 
 echo "- Extracting ZIP.."
-$bin/unzip -o $ajax/*.0 -d $tmp
+unzip -o $ajax/*.0 -d $tmp
 echo " "
 
 echo "- Extraction system.new.dat.br.."

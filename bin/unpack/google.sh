@@ -18,7 +18,7 @@ echo "- Detected Model: Google"
 echo " "
 
 echo "- Extracting ZIP.."
-$bin/unzip -o $ajax/*.zip -d $tmp
+unzip -o $ajax/*.zip -d $tmp
 echo " "
 
 echo "- Extracting the Images from payload.bin.."
