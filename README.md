@@ -5,7 +5,7 @@ UKA Lite é uma ferramenta que tem seu foco principal, portar sistemas da `Samsu
 Em sistemas Debian e Ubuntu, instale todos as dependências necessárias usando o `apt`
 
 ```
-apt --assume-yes update && apt --assume-yes install "git" "python3"
+apt --assume-yes update && apt --assume-yes install "git" "python3" "lz4"
 ```
 
 #### Fedora/CentOS
@@ -21,7 +21,7 @@ yum -y install "git" "python3"
 No Arch Linux, instale todos as dependências necessárias usando o `pacman`
 
 ```
-pacman --sync --refresh && pacman --sync "git" "python3"
+pacman --sync --refresh && pacman --sync "git" "python3" "lz4"
 ```
 
 #### openSUSE
@@ -29,7 +29,7 @@ pacman --sync --refresh && pacman --sync "git" "python3"
 No openSUSE, instale todos as dependências necessárias usando o `zypper`
 
 ```
-zypper refresh && zypper install "git" "python3"
+zypper refresh && zypper install "git" "python3" "lz4"
 ```
 
 ### Código
