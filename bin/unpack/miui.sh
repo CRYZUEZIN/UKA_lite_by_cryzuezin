@@ -19,15 +19,55 @@ else
 #
 fi
 
-echo "- Detected Model: Google"
+echo "- Detected Model: Xioami"
+echo " "
+
+echo "- Renaming the file.."
+mv $ajax/*.0.zip $ajax/*.0
 echo " "
 
 echo "- Extracting ZIP.."
-$bin/unzip -o $ajax/*.zip -d $tmp
+$bin/unzip -o $ajax/*.0 -d $tmp
 echo " "
 
-echo "- Extracting the Images from payload.bin.."
-$bin/payload-dumper -c 8 -o $tmp $tmp/*.bin
+echo "- Extraction system.new.dat.br.."
+$bin/brotli -d $tmp/system.new.dat.br -o $tmp/system.new.dat
+rm -rf $tmp/system.new.dat.br
+echo " "
+
+echo "- Extraction system.new.dat.."
+python3 $pybin/sdat2img.py $tmp/system.transfer.list $tmp/system.new.dat $tmp/system.img
+rm -rf $tmp/system.new.dat $tmp/system.transfer.list
+echo " "
+
+echo "- Extraction product.new.dat.br..."
+$bin/brotli -d $tmp/product.new.dat.br -o $tmp/product.new.dat
+rm -rf $tmp/product.new.dat.br
+echo " "
+
+echo "- Extraction product.new.dat.."
+python3 $pybin/sdat2img.py $tmp/product.transfer.list $tmp/product.new.dat $tmp/product.img
+rm -rf $tmp/product.new.dat $tmp/product.transfer.list
+echo " "
+
+echo "- Extraction system_ext.new.dat.br.."
+$bin/brotli -d $tmp/system_ext.new.dat.br -o $tmp/system_ext.new.dat
+rm -rf $tmp/system_ext.new.dat.br
+echo " "
+
+echo "- Extraction system_ext.new.dat.."
+python3 $pybin/sdat2img.py $tmp/system_ext.transfer.list $tmp/system_ext.new.dat $tmp/system_ext.img
+rm -rf $tmp/system_ext.new.dat $tmp/system_ext.transfer.list
+echo " "
+
+echo "- Extraction vendor.new.dat.br.."
+$bin/brotli -d $tmp/vendor.new.dat.br -o $tmp/vendor.new.dat
+rm -rf $tmp/vendor.new.dat.br
+echo " "
+
+echo "- Extraction vendor.new.dat.."
+python3 $pybin/sdat2img.py $tmp/vendor.transfer.list $tmp/vendor.new.dat $tmp/vendor.img
+rm -rf $tmp/vendor.new.dat $tmp/vendor.transfer.list
 echo " "
 
 python3 $pybin/imgextractor.py $tmp/system.img $editor
@@ -159,7 +199,7 @@ sed -i "s+devices/+system/+" $editor/config/devices/devices_fs_config
 cat $editor/config/devices/devices_fs_config >> $editor/config/system/system_fs_config
 cat $phh/phh_fs_config >> $editor/config/system/system_fs_config
 sed -i "s+0 0 0777+0 0 0644+" $editor/config/system/system_fs_config
-cat $config/google_fs_config >> $editor/config/system/system_fs_config
+cat $config/miui_fs_config >> $editor/config/system/system_fs_config
 cp -frp $editor/vendor/overlay/* $editor/system/system/product/overlay
 cp -frp $editor/phh_patch/* $editor/system
 cp -frp $editor/devices/* $editor/system
@@ -171,32 +211,37 @@ cp -frp $editor/vendor/etc/passwd $editor/system/system/cryzuezin
 rm -rf $editor/vendor
 
 rm -rf $editor/config/system/system_file_contexts
-cp $contexts/google_file_contexts $editor/config/system
-cd $editor/config/system && mv google_file_contexts system_file_contexts
+cp $contexts/miui_file_contexts $editor/config/system
+cd $editor/config/system && mv miui_file_contexts system_file_contexts
 
-echo "- Doing Debloat, set it in $bin"; sleep 5
-# Debloat for Google
-cd $editor/system/system && sh $debloat/google_debloat.sh
+echo "- Merging APEX, into main folder.."
+cp -frp $editor/system/system/system_ext/apex/* $editor/system/system/apex
+rm -rf $editor/system/system/system_ext/apex
 echo " "
 
-echo "- Detected Model: Google"
+echo "- Doing Debloat, set it in $debloat"; sleep 5
+# Debloat for MIUI
+cd $editor/system/system && sh $debloat/miui_debloat.sh
+echo " "
+
+echo "- Detected Model: Xiaomi"
 echo " "
 
 echo "- Repacking system.."
 date=`date +%Y%m%d`
 size1=`du -sb $editor/system | cut -f1`
 space=`expr $size1 + 259912340`
-$bin/make_ext4fs -J -T -1 -S $editor/config/system/system_file_contexts -C $editor/config/system/system_fs_config -l $space -a system $tmp/Google-AB-$date-CRYZUEZIN.img $editor/system
+$bin/make_ext4fs -J -T -1 -S $editor/config/system/system_file_contexts -C $editor/config/system/system_fs_config -l $space -a system $tmp/MIUI-AB-$date-CRYZUEZIN.img $editor/system
 echo "system size = $space"
 echo " "
 
 echo "- Compressing the IMG in GZIP.."
-gzip -c $tmp/Google-AB-$date-CRYZUEZIN.img > $tmp/Google-AB-$date-CRYZUEZIN.img.gz
+gzip -c $tmp/MIUI-AB-$date-CRYZUEZIN.img > $tmp/MIUI-AB-$date-CRYZUEZIN.img.gz
 rm -rf $editor
 echo " "
 
 echo "- Moving the file to $ajax"
-mv -f $tmp/Google-AB-$date-CRYZUEZIN.img.gz $ajax
+mv -f $tmp/MIUI-AB-$date-CRYZUEZIN.img.gz $ajax
 rm -rf $tmp
 echo " "
 

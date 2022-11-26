@@ -19,15 +19,27 @@ else
 #
 fi
 
-echo "- Detected Model: Google"
+echo "Detected Model: Samsung"
 echo " "
 
-echo "- Extracting ZIP.."
-$bin/unzip -o $ajax/*.zip -d $tmp
+echo "- LZ4 to IMG Conversion.."
+lz4 -df --no-sparse $ajax/super.img.lz4
+lz4 -df --no-sparse $ajax/prism.img.lz4
+lz4 -df --no-sparse $ajax/optics.img.lz4
 echo " "
 
-echo "- Extracting the Images from payload.bin.."
-$bin/payload-dumper -c 8 -o $tmp $tmp/*.bin
+echo "- Conversion Super Partition to RAW.."
+$bin/simg2img $ajax/super.img $tmp/super_raw.img
+rm -rf $ajax/super.img
+echo " "
+
+echo "- Extracting the Images from the Super Partition.."
+$bin/lpunpack $tmp/super_raw.img $tmp
+rm -rf $tmp/super_raw.img
+echo " "
+
+echo "- Removing Unnecessary Images.."
+rm -rf $tmp/odm.img
 echo " "
 
 python3 $pybin/imgextractor.py $tmp/system.img $editor
@@ -37,17 +49,13 @@ rm -rf $editor/config/system/system_avb.img
 rm -rf $tmp/system.img
 sed -i "s+system/system/product 0 0 0644 /product+system/product 0 0 0644 /system/product+" $editor/config/system/system_fs_config
 sed -i "s+system/product 0 0 0755+system/system/product 0 0 0755+" $editor/config/system/system_fs_config
-sed -i "s+system/system/system_ext 0 0 0644 /system_ext+system/system_ext 0 0 0644 /system/system_ext+" $editor/config/system/system_fs_config
-sed -i "s+system/system_ext 0 0 0755+system/system/system_ext 0 0 0755+" $editor/config/system/system_fs_config
 rm -rf $editor/system/cache && cd $editor/system && mkdir cache
 sed -i "s+cache 0 0 0644 /data/cache+cache 1000 2001 0770+" $editor/config/system/system_fs_config
 sed -i "s+system/system/bin 0 0 0755+system/system/bin 0 2000 0751+" $editor/config/system/system_fs_config
 sed -i "s+system/system/bin/uncrypt 0 0 0755+system/system/bin/uncrypt 0 2000 0755+" $editor/config/system/system_fs_config
 sed -i "s+system/system/bin/simpleperf_app_runner 0 2000 0755+system/system/bin/simpleperf_app_runner 0 2000 0750 capabilities=0xc0+" $editor/config/system/system_fs_config
 rm -rf $editor/system/system/product
-rm -rf $editor/system/system/system_ext
 rm -rf $editor/system/product
-rm -rf $editor/system/system_ext
 rm -rf $editor/system/system/lib/vndk-30
 rm -rf $editor/system/system/lib/vndk-sp-30
 rm -rf $editor/system/system/lib/vndk-31
@@ -61,7 +69,6 @@ rm -rf $editor/system/system/lib64/vndk-sp-31
 rm -rf $editor/system/system/lib64/vndk-32
 rm -rf $editor/system/system/lib64/vndk-sp-32
 ln -s /system/product $editor/system
-ln -s /system/system_ext $editor/system
 cd $editor/system/system/lib
 ln -s /apex/com.android.vndk.v30/lib $editor/system/system/lib
 mv lib vndk-30
@@ -127,22 +134,11 @@ sed -i "s+ro.product.property_source_order=odm,vendor,product,system_ext,system+
 sed -i "s+persist.sys.usb.config=none+persist.sys.usb.config=adb+" $editor/system/system/product/etc/build.prop
 cat $phh/fix.prop >> $editor/system/system/product/etc/build.prop
 
-python3 $pybin/imgextractor.py $tmp/system_ext.img $editor
-full_avb=$($bin/avbtool info_image --image $tmp/system_ext.img 2> $editor/config/system_ext/system_ext_avb.log)
-echo $full_avb > $editor/config/system_ext/system_ext_avb.img
-rm -rf $editor/config/system_ext/system_ext_avb.img
-rm -rf $tmp/system_ext.img
-sed -i "s+system_ext/+system/system/system_ext/+" $editor/config/system_ext/system_ext_fs_config
-cat $editor/config/system_ext/system_ext_fs_config >> $editor/config/system/system_fs_config
-mv -f $editor/system_ext $editor/system/system
-
 python3 $pybin/imgextractor.py $tmp/vendor.img $editor
 full_avb=$($bin/avbtool info_image --image $tmp/vendor.img 2> $editor/config/vendor/vendor_avb.log)
 echo $full_avb > $editor/config/vendor/vendor_avb.img
 rm -rf $editor/config/vendor/vendor_avb.img
 rm -rf $tmp/vendor.img
-rm -rf $tmp
-mkdir -p $tmp
 sed -i "s+vendor/+system/system/product/+" $editor/config/vendor/vendor_fs_config
 grep ^system/system/product/overlay $editor/config/vendor/vendor_fs_config | grep 0755$ > $editor/config/vendor/vendor_fs_0755_config
 grep ^system/system/product/overlay $editor/config/vendor/vendor_fs_config | grep 0644$ > $editor/config/vendor/vendor_fs_0644_config
@@ -153,13 +149,6 @@ sed -i "s+system/system/product/overlay/+system/system/cryzuezin/vo/+" $editor/c
 sed -i "s+system/system/product/overlay/+system/system/cryzuezin/vo/+" $editor/config/vendor/vendor_fs_0644_config
 cat $editor/config/vendor/vendor_fs_0755_config >> $editor/config/system/system_fs_config
 cat $editor/config/vendor/vendor_fs_0644_config >> $editor/config/system/system_fs_config
-sed -i "s+phh_patch/+system/+" $editor/config/phh_patch/phh_patch_fs_config
-cat $editor/config/phh_patch/phh_patch_fs_config >> $editor/config/system/system_fs_config
-sed -i "s+devices/+system/+" $editor/config/devices/devices_fs_config
-cat $editor/config/devices/devices_fs_config >> $editor/config/system/system_fs_config
-cat $phh/phh_fs_config >> $editor/config/system/system_fs_config
-sed -i "s+0 0 0777+0 0 0644+" $editor/config/system/system_fs_config
-cat $config/google_fs_config >> $editor/config/system/system_fs_config
 cp -frp $editor/vendor/overlay/* $editor/system/system/product/overlay
 cp -frp $editor/phh_patch/* $editor/system
 cp -frp $editor/devices/* $editor/system
@@ -171,32 +160,66 @@ cp -frp $editor/vendor/etc/passwd $editor/system/system/cryzuezin
 rm -rf $editor/vendor
 
 rm -rf $editor/config/system/system_file_contexts
-cp $contexts/google_file_contexts $editor/config/system
-cd $editor/config/system && mv google_file_contexts system_file_contexts
+cp $contexts/oneui_file_contexts $editor/config/system
+cd $editor/config/system && mv oneui_file_contexts system_file_contexts
 
-echo "- Doing Debloat, set it in $bin"; sleep 5
-# Debloat for Google
-cd $editor/system/system && sh $debloat/google_debloat.sh
+echo "- Merging APEX, into main folder.."
+cp -frp $editor/system/system/system_ext/apex/* $editor/system/system/apex
+rm -rf $editor/system/system/system_ext/apex
 echo " "
 
-echo "- Detected Model: Google"
+python3 $pybin/imgextractor.py $ajax/prism.img $editor
+full_avb=$($bin/avbtool info_image --image $ajax/prism.img 2> $editor/config/prism/prism_avb.log)
+echo $full_avb > $editor/config/prism/prism_avb.img
+rm -rf $editor/config/prism/prism_avb.img
+rm -rf $ajax/prism.raw.img
+rm -rf $ajax/prism.img
+sed -i "s+prism/+system/prism/+" $editor/config/prism/prism_fs_config
+cat $editor/config/prism/prism_fs_config >> $editor/config/system/system_fs_config
+mv -f $editor/prism $editor/system
+
+python3 $pybin/imgextractor.py $ajax/optics.img $editor
+full_avb=$($bin/avbtool info_image --image $ajax/optics.img 2> $editor/config/optics/optics_avb.log)
+echo $full_avb > $editor/config/optics/optics_avb.img
+rm -rf $editor/config/optics/optics_avb.img
+rm -rf $ajax/optics.raw.img
+rm -rf $ajax/optics.img
+sed -i "s+optics/+system/optics/+" $editor/config/optics/optics_fs_config
+cat $editor/config/optics/optics_fs_config >> $editor/config/system/system_fs_config
+mv -f $editor/optics $editor/system
+sed -i "s+phh_patch/+system/+" $editor/config/phh_patch/phh_patch_fs_config
+cat $editor/config/phh_patch/phh_patch_fs_config >> $editor/config/system/system_fs_config
+sed -i "s+devices/+system/+" $editor/config/devices/devices_fs_config
+cat $editor/config/devices/devices_fs_config >> $editor/config/system/system_fs_config
+cat $phh/phh_fs_config >> $editor/config/system/system_fs_config
+sed -i "s+0 0 0777+0 0 0644+" $editor/config/system/system_fs_config
+cat $config/oneui_fs_config >> $editor/config/system/system_fs_config
+rm -rf $tmp
+mkdir -p $tmp
+
+echo "- Doing Debloat, set it in $debloat"; sleep 5
+#Debloat for OneUI
+cd $editor/system && sh $debloat/oneui_debloat.sh
+echo " "
+
+echo "- Detected Model: Samsung"
 echo " "
 
 echo "- Repacking system.."
 date=`date +%Y%m%d`
 size1=`du -sb $editor/system | cut -f1`
 space=`expr $size1 + 259912340`
-$bin/make_ext4fs -J -T -1 -S $editor/config/system/system_file_contexts -C $editor/config/system/system_fs_config -l $space -a system $tmp/Google-AB-$date-CRYZUEZIN.img $editor/system
+$bin/make_ext4fs -J -T -1 -S $editor/config/system/system_file_contexts -C $editor/config/system/system_fs_config -l $space -a system $tmp/OneUI-AB-$date-CRYZUEZIN.img $editor/system
 echo "system size = $space"
 echo " "
 
 echo "- Compressing the IMG in GZIP.."
-gzip -c $tmp/Google-AB-$date-CRYZUEZIN.img > $tmp/Google-AB-$date-CRYZUEZIN.img.gz
+gzip -c $tmp/OneUI-AB-$date-CRYZUEZIN.img > $tmp/OneUI-AB-$date-CRYZUEZIN.img.gz
 rm -rf $editor
 echo " "
 
 echo "- Moving the file to $ajax"
-mv -f $tmp/Google-AB-$date-CRYZUEZIN.img.gz $ajax
+mv -f $tmp/OneUI-AB-$date-CRYZUEZIN.img.gz $ajax
 rm -rf $tmp
 echo " "
 

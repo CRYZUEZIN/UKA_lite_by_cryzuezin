@@ -5,7 +5,6 @@ ajax=`pwd`
 uka=`pwd`
 #BIN
 bin=$uka/bin/arm
-bb=$bin/busybox
 tmp=$uka/bin/tmp
 pybin=$uka/bin/python
 editor=$uka/editor
@@ -19,15 +18,51 @@ else
 #
 fi
 
-echo "- Detected Model: Google"
+if [ -f $ajax/*.xml.zip ]; then
+# MotoUI Global (12.0)
+echo "- Detected Model: Motorola"
+echo " "
+
+echo "- Renaming the file.."
+mv $ajax/*.xml.zip $ajax/*.xml
 echo " "
 
 echo "- Extracting ZIP.."
-$bin/unzip -o $ajax/*.zip -d $tmp
+$bin/unzip -o $ajax/*.xml -d $tmp
 echo " "
 
-echo "- Extracting the Images from payload.bin.."
-$bin/payload-dumper -c 8 -o $tmp $tmp/*.bin
+echo "- Conversion sparsechunk.* to super.img.."
+cd $tmp
+name1=$(find . -maxdepth 1 -name "super*chunk*" | sort -n | grep -v "[0-9][0-9]")
+name2=$(find . -maxdepth 1 -name "super*chunk*" | sort -n | grep "[0-9][0-9]")
+echo " "
+
+echo "- Gluing super_raw.img.."
+$bin/simg2img ${name1} ${name2} $tmp/super_raw.img
+echo " "
+else
+# MotoUI CN (12.0)
+echo "- Detected Model: Motorola"
+echo " "
+
+echo "- Conversion sparsechunk.* to super.img.."
+cd $ajax
+name1=$(find . -maxdepth 1 -name "super*chunk*" | sort -n | grep -v "[0-9][0-9]")
+name2=$(find . -maxdepth 1 -name "super*chunk*" | sort -n | grep "[0-9][0-9]")
+echo " "
+
+echo "- Gluing super_raw.img.."
+$bin/simg2img ${name1} ${name2} $tmp/super_raw.img
+echo " "
+fi
+
+echo "- Extracting the Images from the Super Partition.."
+$bin/lpunpack $tmp/super_raw.img $tmp
+rm -rf $tmp/super_raw.img
+echo " "
+
+echo "- Merging Motorola Images, to the ideal format.."
+cd $tmp && mv product_a.img product.img && rm product_b.img && mv system_a.img system.img && rm system_b.img && mv system_ext_a.img system_ext.img && rm system_ext_b.img && mv vendor_a.img vendor.img && rm vendor_b.img
 echo " "
 
 python3 $pybin/imgextractor.py $tmp/system.img $editor
@@ -159,7 +194,7 @@ sed -i "s+devices/+system/+" $editor/config/devices/devices_fs_config
 cat $editor/config/devices/devices_fs_config >> $editor/config/system/system_fs_config
 cat $phh/phh_fs_config >> $editor/config/system/system_fs_config
 sed -i "s+0 0 0777+0 0 0644+" $editor/config/system/system_fs_config
-cat $config/google_fs_config >> $editor/config/system/system_fs_config
+cat $config/motoui_fs_config >> $editor/config/system/system_fs_config
 cp -frp $editor/vendor/overlay/* $editor/system/system/product/overlay
 cp -frp $editor/phh_patch/* $editor/system
 cp -frp $editor/devices/* $editor/system
@@ -171,32 +206,44 @@ cp -frp $editor/vendor/etc/passwd $editor/system/system/cryzuezin
 rm -rf $editor/vendor
 
 rm -rf $editor/config/system/system_file_contexts
-cp $contexts/google_file_contexts $editor/config/system
-cd $editor/config/system && mv google_file_contexts system_file_contexts
+cp $contexts/motoui_file_contexts $editor/config/system
+cd $editor/config/system && mv motoui_file_contexts system_file_contexts
 
-echo "- Doing Debloat, set it in $bin"; sleep 5
-# Debloat for Google
-cd $editor/system/system && sh $debloat/google_debloat.sh
+echo "- Merging APEX, into main folder.."
+cp -frp $editor/system/system/system_ext/apex/* $editor/system/system/apex
+rm -rf $editor/system/system/system_ext/apex
 echo " "
 
-echo "- Detected Model: Google"
+echo "- Doing Debloat, set it in $debloat"; sleep 5
+if [ -d $editor/system/system/product/app/LatinIME ]; then
+# Debloat for MotoUI CN (Chinese)
+cd $editor/system/system && sh $debloat/motoui_debloat02.sh
+echo " "
+fi
+
+# Debloat for MotoUI Global
+cd $editor/system/system && sh $debloat/motoui_debloat.sh
+echo " "
+
+echo "- Detected Model: Motorola"
 echo " "
 
 echo "- Repacking system.."
 date=`date +%Y%m%d`
 size1=`du -sb $editor/system | cut -f1`
 space=`expr $size1 + 259912340`
-$bin/make_ext4fs -J -T -1 -S $editor/config/system/system_file_contexts -C $editor/config/system/system_fs_config -l $space -a system $tmp/Google-AB-$date-CRYZUEZIN.img $editor/system
+$bin/make_ext4fs -J -T -1 -S $editor/config/system/system_file_contexts -C $editor/config/system/system_fs_config -l $space -a system $tmp/MotoUI-AB-$date-CRYZUEZIN.img $editor/system
 echo "system size = $space"
-echo " "
 
+echo " "
 echo "- Compressing the IMG in GZIP.."
-gzip -c $tmp/Google-AB-$date-CRYZUEZIN.img > $tmp/Google-AB-$date-CRYZUEZIN.img.gz
+gzip -c $tmp/MotoUI-AB-$date-CRYZUEZIN.img > $tmp/MotoUI-AB-$date-CRYZUEZIN.img.gz
+rm -rf $tmp/MotoUI-AB-$date-CRYZUEZIN.img
 rm -rf $editor
 echo " "
 
 echo "- Moving the file to $ajax"
-mv -f $tmp/Google-AB-$date-CRYZUEZIN.img.gz $ajax
+mv -f $tmp/MotoUI-AB-$date-CRYZUEZIN.img.gz $ajax
 rm -rf $tmp
 echo " "
 
