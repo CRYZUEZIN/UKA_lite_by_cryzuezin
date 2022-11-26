@@ -1,7 +1,7 @@
 #!/system/bin/sh
 
 #PATH
-uka=/data/local/uka-lite
+uka=`pwd`
 #functions
 chmod -R 755 $uka
 clear
