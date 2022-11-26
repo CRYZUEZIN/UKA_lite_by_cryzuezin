@@ -13,11 +13,6 @@ debloat=$uka/bin/debloat
 contexts=$uka/bin/contexts
 config=$uka/bin/config
 phh=$uka/bin/phh
-if [ -f /data/data/com.termux/files/usr/bin/python ]; then
-#
-else
-#
-fi
 
 echo "- Detected Model: Xioami"
 echo " "
