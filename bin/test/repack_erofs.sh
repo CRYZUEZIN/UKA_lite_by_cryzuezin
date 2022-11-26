@@ -17,9 +17,9 @@ chmod -R 755 $bin
 
 echo "- Repacking system.."
 date=`date +%Y%m%d`
-size1=`du -sb $editor/system | cut -f1`
+size1=`du -sb $tmp/system | cut -f1`
 space=`expr $size1 + 259912340`
-$bin/make_ext4fs -J -T -1 -S $editor/config/system/system_file_contexts -C $editor/config/system/system_fs_config -l $space -a system $tmp/GSI-AB-$date-CRYZUEZIN.img $editor/system
+$bin/make_ext4fs -J -T -1 -S $tmp/config/system_file_contexts -C $tmp/config/system_fs_config -l $space -a system $editor/GSI-AB-$date-CRYZUEZIN.img $tmp/system
 echo "system size = $space"
 echo " "
 

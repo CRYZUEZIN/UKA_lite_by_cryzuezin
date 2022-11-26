@@ -1,18 +1,22 @@
 #!/system/bin/sh
 
 #PATH
-ajax=/sdcard
-uka=/data/local/uka-lite
+ajax=`pwd`
+uka=`pwd`
 #BIN
 bin=$uka/bin/arm
+bb=$bin/busybox
 tmp=$uka/bin/tmp
 pybin=$uka/bin/python
 editor=$uka/editor
-py=/data/local/python39/usr/bin/python3.9
+debloat=$uka/bin/debloat
+contexts=$uka/bin/contexts
+config=$uka/bin/config
+phh=$uka/bin/phh
 chmod -R 755 $bin
 rm -rf $tmp
 rm -rf $editor
 mkdir -p $tmp
 mkdir -p $editor
 
-$py $pybin/imgextractor.py $ajax/system.img $editor
+python3 $pybin/imgextractor.py $ajax/system.img $editor
