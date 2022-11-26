@@ -13,7 +13,7 @@ apt --assume-yes update && apt --assume-yes install "git" "python3" "lz4"
 Em sistemas Fedora e CentOS, instale todos as dependências necessárias usando o `yum`
 
 ```
-yum -y install "git" "python3"
+yum -y install "git" "python3" "lz4"
 ```
 
 #### Arch Linux
