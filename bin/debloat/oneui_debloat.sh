@@ -19,10 +19,25 @@ rm -rf system/product/priv-app/Messages
 rm -rf system/system_ext/priv-app/SetupWizard
 rm -rf prism/app
 rm -rf prism/priv-app
-cp -frp prism/sipdb/SwiftKey/en-us prism/sipdb
-rm -rf prism/sipdb/SwiftKey/*
-cp -frp prism/sipdb/en-us prism/sipdb/SwiftKey
-rm -rf prism/sipdb/en-us
+rm -rf prism/sipdb/SwiftKey/as
+rm -rf prism/sipdb/SwiftKey/bn
+rm -rf prism/sipdb/SwiftKey/en_gb
+rm -rf prism/sipdb/SwiftKey/en_in
+rm -rf prism/sipdb/SwiftKey/gu
+rm -rf prism/sipdb/SwiftKey/hg_in
+rm -rf prism/sipdb/SwiftKey/hi
+rm -rf prism/sipdb/SwiftKey/kn
+rm -rf prism/sipdb/SwiftKey/mar
+rm -rf prism/sipdb/SwiftKey/ml
+rm -rf prism/sipdb/SwiftKey/mr
+rm -rf prism/sipdb/SwiftKey/ne
+rm -rf prism/sipdb/SwiftKey/or
+rm -rf prism/sipdb/SwiftKey/pa
+rm -rf prism/sipdb/SwiftKey/si
+rm -rf prism/sipdb/SwiftKey/ta
+rm -rf prism/sipdb/SwiftKey/te
+rm -rf prism/sipdb/SwiftKey/tel
+rm -rf prism/sipdb/SwiftKey/ur
 rm -rf prism/preload
 rm -rf system/hidden
 rm -rf system/preload
