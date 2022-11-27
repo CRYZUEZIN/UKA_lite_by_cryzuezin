@@ -12,7 +12,6 @@ debloat=$uka/bin/debloat
 contexts=$uka/bin/contexts
 config=$uka/bin/config
 phh=$uka/bin/phh
-rwsystem=$uka/bin/rwsystem
 
 if [ -f $ajax/*.xml.zip ]; then
 # MotoUI Global (12.0)
@@ -205,7 +204,6 @@ rm -rf $editor/devices
 cp -frp $editor/vendor/overlay/* $editor/system/system/cryzuezin/vo
 cp -frp $editor/vendor/etc/group $editor/system/system/cryzuezin
 cp -frp $editor/vendor/etc/passwd $editor/system/system/cryzuezin
-cp -frp $rwsystem/rw-system.sh $editor/system/system/bin
 rm -rf $editor/vendor
 
 rm -rf $editor/config/system/system_file_contexts
