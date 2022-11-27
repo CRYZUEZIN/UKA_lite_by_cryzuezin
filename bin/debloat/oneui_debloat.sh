@@ -38,6 +38,9 @@ rm -rf prism/sipdb/SwiftKey/ta
 rm -rf prism/sipdb/SwiftKey/te
 rm -rf prism/sipdb/SwiftKey/tel
 rm -rf prism/sipdb/SwiftKey/ur
+rm -rf prism/sipdb/SwiftKey/es_us
+rm -rf prism/sipdb/SwiftKey/ko
+rm -rf prism/sipdb/SwiftKey/pt_br
 rm -rf prism/preload
 rm -rf system/hidden
 rm -rf system/preload
