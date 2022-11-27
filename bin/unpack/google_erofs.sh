@@ -161,8 +161,6 @@ cp -frp $tmp/devices/* $tmp/system
 rm -rf $tmp/phh_patch
 rm -rf $tmp/devices
 cp -frp $tmp/vendor/overlay/* $tmp/system/system/cryzuezin/vo
-cp -frp $tmp/vendor/etc/group $tmp/system/system/cryzuezin
-cp -frp $tmp/vendor/etc/passwd $tmp/system/system/cryzuezin
 rm -rf $tmp/vendor
 
 rm -rf $tmp/config/*file_contexts
