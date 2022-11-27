@@ -13,7 +13,7 @@ debloat=$uka/bin/debloat
 contexts=$uka/bin/contexts
 config=$uka/bin/config
 phh=$uka/bin/phh
-rwsystem=$uka/bin/realme
+rwsystem=$uka/bin/rwsystem
 
 echo "- Detected Model: Realme"
 echo " "
