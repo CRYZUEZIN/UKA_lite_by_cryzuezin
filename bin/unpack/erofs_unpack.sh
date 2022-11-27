@@ -13,6 +13,7 @@ debloat=$uka/bin/debloat
 contexts=$uka/bin/contexts
 config=$uka/bin/config
 phh=$uka/bin/phh
+rwsystem=$uka/bin/rwsystem
 
 echo -en "\E[37;1m"
 cd $tmp
