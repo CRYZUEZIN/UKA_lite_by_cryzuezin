@@ -21,7 +21,7 @@ rm -rf prism/app
 rm -rf prism/priv-app
 cp -frp prism/sipdb/SwiftKey/en-us prism/sipdb
 rm -rf prism/sipdb/SwiftKey/*
-cp -frp prism/sipdb/en-us prism/sipdb
+cp -frp prism/sipdb/en-us prism/sipdb/SwiftKey
 rm -rf prism/sipdb/en-us
 rm -rf prism/preload
 rm -rf system/hidden
