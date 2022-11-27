@@ -191,13 +191,7 @@ cat $phh/phh_fs_config >> $editor/config/system/system_fs_config
 sed -i "s+0 0 0777+0 0 0644+" $editor/config/system/system_fs_config
 cat $config/motoui_fs_config >> $editor/config/system/system_fs_config
 cp -frp $editor/vendor/overlay/* $editor/system/system/product/overlay
-# cp -frp $editor/system/system/bin/init $editor
-# cp -frp $editor/system/system/lib64/libfs_mgr.so $editor
-# cp -frp $editor/system/system/lib64/libfs_mgr_binder.so $editor
 cp -frp $editor/phh_patch/* $editor/system
-# mv -f $editor/init $editor/system/system/bin
-# mv -f $editor/libfs_mgr.so $editor/system/system/lib64
-# mv -f $editor/libfs_mgr_binder.so $editor/system/system/lib64
 cp -frp $editor/devices/* $editor/system
 rm -rf $editor/phh_patch
 rm -rf $editor/devices
