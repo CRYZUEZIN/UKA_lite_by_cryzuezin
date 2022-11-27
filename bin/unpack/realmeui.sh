@@ -13,6 +13,7 @@ debloat=$uka/bin/debloat
 contexts=$uka/bin/contexts
 config=$uka/bin/config
 phh=$uka/bin/phh
+rw=$uka/bin/realme
 
 echo "- Detected Model: Realme"
 echo " "
@@ -159,6 +160,9 @@ cp -frp $tmp/devices/* $tmp/system
 rm -rf $tmp/phh_patch
 rm -rf $tmp/devices
 cp -frp $tmp/vendor/overlay/* $tmp/system/system/cryzuezin/vo
+cp -frp $tmp/vendor/etc/group $tmp/system/system/cryzuezin
+cp -frp $tmp/vendor/etc/passwd $tmp/system/system/cryzuezin
+cp -frp $rw/* $tmp/system/system
 rm -rf $tmp/vendor
 
 rm -rf $tmp/config/*file_contexts
