@@ -150,10 +150,10 @@ cp -frp $editor/phh_patch/* $editor/system
 cp -frp $editor/devices/* $editor/system
 rm -rf $editor/phh_patch
 rm -rf $editor/devices
-cp -frp $tmp/vendor/overlay/* $tmp/system/system/cryzuezin/vo
-cp -frp $vendor/vendor/etc/group $vendor/system/system/cryzuezin
-cp -frp $vendor/vendor/etc/passwd $vendor/system/system/cryzuezin
-cp -frp $rwsystem/rw-system.sh $tmp/system/system/bin
+cp -frp $editor/vendor/overlay/* $editor/system/system/cryzuezin/vo
+cp -frp $editor/vendor/etc/group $editor/system/system/cryzuezin
+cp -frp $editor/vendor/etc/passwd $editor/system/system/cryzuezin
+cp -frp $rwsystem/rw-system.sh $editor/system/system/bin
 rm -rf $editor/vendor
 
 rm -rf $editor/config/system/system_file_contexts

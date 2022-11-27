@@ -161,9 +161,9 @@ cp -frp $tmp/phh_patch/* $tmp/system
 cp -frp $tmp/devices/* $tmp/system
 rm -rf $tmp/phh_patch
 rm -rf $tmp/devices
-cp -frp $tmp/vendor/overlay/* $tmp/system/system/cryzuezin/vo
-cp -frp $vendor/vendor/etc/group $vendor/system/system/cryzuezin
-cp -frp $vendor/vendor/etc/passwd $vendor/system/system/cryzuezin
+cp -frp $tmp/vendor/overlay/* $tpm/system/system/cryzuezin/vo
+cp -frp $tmp/vendor/etc/group $tmp/system/system/cryzuezin
+cp -frp $tmp/vendor/etc/passwd $tmp/system/system/cryzuezin
 cp -frp $rwsystem/rw-system.sh $tmp/system/system/bin
 rm -rf $tmp/vendor
 
