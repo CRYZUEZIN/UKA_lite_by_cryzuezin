@@ -161,8 +161,6 @@ cp -frp $editor/devices/* $editor/system
 rm -rf $editor/phh_patch
 rm -rf $editor/devices
 cp -frp $editor/vendor/overlay/* $editor/system/system/cryzuezin/vo
-cp -frp $editor/vendor/etc/group $editor/system/system/cryzuezin
-cp -frp $editor/vendor/etc/passwd $editor/system/system/cryzuezin
 rm -rf $editor/vendor
 
 rm -rf $editor/config/system/system_file_contexts
