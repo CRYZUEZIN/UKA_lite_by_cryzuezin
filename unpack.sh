@@ -13,7 +13,7 @@ debloat=$uka/bin/debloat
 config=$uka/bin/config
 contexts=$uka/bin/contexts
 phh=$uka/bin/phh
-rwsystem=$uka/bin/realme
+rwsystem=$uka/bin/rwsystem
 chmod -R 755 $uka
 rm -rf $tmp
 rm -rf $editor
