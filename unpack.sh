@@ -68,6 +68,12 @@ sh $uka/bin/unpack/motoui.sh
 
 fi
 
+if [ -f $ajax/super.img_sparsechunk.1 ]; then
+
+sh $uka/bin/unpack/motoui.sh
+
+fi
+
 if [ -f $ajax/*.0.zip ]; then
 
 sh $uka/bin/unpack/miui.sh
