@@ -855,12 +855,6 @@ rm -rf product/priv-app/EasyPrefix/oat
 rm -rf product/priv-app/EasyPrefix/oat/arm64
 rm -rf product/priv-app/EasyPrefix/oat/arm64/EasyPrefix.odex
 rm -rf product/priv-app/EasyPrefix/oat/arm64/EasyPrefix.vdex
-rm -rf product/priv-app/FilesGoogle
-rm -rf product/priv-app/FilesGoogle/FilesGoogle.apk
-rm -rf product/priv-app/FilesGoogle/oat
-rm -rf product/priv-app/FilesGoogle/oat/arm64
-rm -rf product/priv-app/FilesGoogle/oat/arm64/FilesGoogle.odex
-rm -rf product/priv-app/FilesGoogle/oat/arm64/FilesGoogle.vdex
 rm -rf product/priv-app/GoogleASI
 rm -rf product/priv-app/GoogleASI/GoogleASI.apk
 rm -rf product/priv-app/GoogleASI/oat
