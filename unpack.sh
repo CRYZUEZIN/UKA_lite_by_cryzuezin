@@ -40,10 +40,6 @@ echo "Put a super.img_sparsechunk.$ on $ajax for Motorola (MotoUI CN - Chinese)"
 echo " "
 echo "Put a $.12.0.zip and $.13.0.zip on $ajax for Xioami"
 echo " "
-echo "Put a $.zip (with payload.bin inside.) on $ajax for Google"
-echo " "
-echo "Take payload.bin from inside $.zip and rename it to google.bin, and put it in $ajax for Google (erofs)"
-echo " "
 echo "Take payload.bin from inside $.zip and rename it to realme.bin, and put it in $ajax for Realme"
 echo " "
 echo "Note: Remember that Ports works on Android 12, Android 12.1 and Android 13 (Not on Android 11)"
@@ -76,18 +72,6 @@ fi
 if [ -f $ajax/*.0.zip ]; then
 
 sh $uka/bin/unpack/miui.sh
-
-fi
-
-if [ -f $ajax/*.zip ]; then
-
-sh $uka/bin/unpack/google.sh
-
-fi
-
-if [ -f $ajax/google.bin ]; then
-
-sh $uka/bin/unpack/google_erofs.sh
 
 fi
 
