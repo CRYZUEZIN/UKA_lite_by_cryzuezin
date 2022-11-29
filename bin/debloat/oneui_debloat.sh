@@ -96,7 +96,6 @@ rm -rf prism/sipdb/SwiftKey/tr
 rm -rf prism/sipdb/SwiftKey/uk
 rm -rf prism/sipdb/SwiftKey/uz
 rm -rf prism/sipdb/SwiftKey/vi
-rm -rf prism/preload
 rm -rf system/hidden
 rm -rf system/preload
 rm -rf system/tts
