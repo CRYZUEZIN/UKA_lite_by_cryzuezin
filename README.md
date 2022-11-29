@@ -1,4 +1,4 @@
-UKA Lite é uma ferramenta que tem seu foco principal, portar sistemas da `Samsung, Motorola, Xioami, Google e Realme!`
+UKA Lite é uma ferramenta que tem seu foco principal, portar sistemas da `Samsung, Motorola, Xioami e Realme!`
 
 ### Instalação
 
