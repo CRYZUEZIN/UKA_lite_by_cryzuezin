@@ -907,9 +907,6 @@ rm -rf system/priv-app/SamsungCloudClient_S22
 rm -rf system/priv-app/SamsungCloudClient_S22/SamsungCloudClient_S22.apk
 rm -rf system/priv-app/SamsungCloudClient_S22/SamsungCloudClient_S22.apk.prof
 rm -rf system/priv-app/SingleTakeService/SingleTakeService.apk.prof
-rm -rf system/priv-app/SystemUIBixby2
-rm -rf system/priv-app/SystemUIBixby2/SystemUIBixby2.apk
-rm -rf system/priv-app/SystemUIBixby2/SystemUIBixby2.apk.prof
 rm -rf system/priv-app/SystemUpdate
 rm -rf system/priv-app/SystemUpdate/SystemUpdate.apk
 rm -rf system/priv-app/SystemUpdate/SystemUpdate.apk.prof
