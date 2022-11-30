@@ -104,6 +104,15 @@ rm -rf system/voicecommanddata
 rm -rf system/saiv
 rm -rf system/product/etc/selinux/mapping
 rm -rf system/system_ext/etc/selinux/mapping
+rm -rf system/system_ext/app/QdcmFF
+rm -rf system/system_ext/app/QdcmFF/QdcmFF.apk
+rm -rf system/system_ext/priv-app/GoogleFeedback
+rm -rf system/system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk
+rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper
+rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/com.qualcomm.qti.services.systemhelper.apk
+rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib
+rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib/arm64
+rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib/arm64/libsystemhelper_jni.so
 #DEBLOAT FOR M52 (PRODUCT)
 # rm -rf system/product/app/Chrome
 # rm -rf system/product/app/Chrome/Chrome.apk
@@ -197,15 +206,58 @@ rm -rf system/product/priv-app/Turbo/Turbo.apk.prof
 rm -rf system/product/priv-app/Velvet
 rm -rf system/product/priv-app/Velvet/Velvet.apk
 rm -rf system/product/priv-app/Velvet/Velvet.apk.prof
-rm -rf system/system_ext/app/QdcmFF
-rm -rf system/system_ext/app/QdcmFF/QdcmFF.apk
-rm -rf system/system_ext/priv-app/GoogleFeedback
-rm -rf system/system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk
-rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper
-rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/com.qualcomm.qti.services.systemhelper.apk
-rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib
-rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib/arm64
-rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib/arm64/libsystemhelper_jni.so
+#DEBLOAT FOR M53 (PRODUCT)
+# rm -rf system/product/app/Chrome
+# rm -rf system/product/app/Chrome/Chrome.apk
+# rm -rf system/product/app/Chrome/Chrome.apk.prof
+# rm -rf system/product/app/DuoStub
+# rm -rf system/product/app/DuoStub/DuoStub.apk
+# rm -rf system/product/app/DuoStub/DuoStub.apk.prof
+# rm -rf system/product/app/Gmail2
+# rm -rf system/product/app/Gmail2/Gmail2.apk
+# rm -rf system/product/app/Gmail2/Gmail2.apk.prof
+# rm -rf system/product/app/Maps
+# rm -rf system/product/app/Maps/Maps.apk
+# rm -rf system/product/app/Maps/Maps.apk.prof
+# rm -rf system/product/app/SpeechServicesByGoogle
+# rm -rf system/product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk
+# rm -rf system/product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk.prof
+# rm -rf system/product/app/YouTube
+# rm -rf system/product/app/YouTube/YouTube.apk
+# rm -rf system/product/app/YouTube/YouTube.apk.prof
+# rm -rf system/product/etc/permissions/privapp-permissions-provision.xml
+# rm -rf system/product/priv-app/AndroidAutoStub
+# rm -rf system/product/priv-app/AndroidAutoStub/AndroidAutoStub.apk
+# rm -rf system/product/priv-app/AndroidAutoStub/AndroidAutoStub.apk.prof
+# rm -rf system/product/priv-app/CarrierServices
+# rm -rf system/product/priv-app/CarrierServices/CarrierServices.apk
+# rm -rf system/product/priv-app/CarrierServices/CarrierServices.apk.prof
+# rm -rf system/product/priv-app/CarrierWifi
+# rm -rf system/product/priv-app/CarrierWifi/CarrierWifi.apk
+# rm -rf system/product/priv-app/CarrierWifi/CarrierWifi.apk.prof
+# rm -rf system/product/priv-app/Turbo
+# rm -rf system/product/priv-app/Turbo/Turbo.apk
+# rm -rf system/product/priv-app/Turbo/Turbo.apk.prof
+# rm -rf system/product/priv-app/Velvet
+# rm -rf system/product/priv-app/Velvet/Velvet.apk
+# rm -rf system/product/priv-app/Velvet/Velvet.apk.prof
+# rm -rf system/product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON
+# rm -rf system/product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON/HotwordEnrollmentOKGoogleEx3HEXAGON.apk
+# rm -rf system/product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON/HotwordEnrollmentOKGoogleEx3HEXAGON.apk.prof
+# rm -rf system/product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON
+# rm -rf system/product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON/HotwordEnrollmentXGoogleEx3HEXAGON.apk
+# rm -rf system/product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON/HotwordEnrollmentXGoogleEx3HEXAGON.apk.prof
+# rm -rf system/product/priv-app/PrivateComputeServices
+# rm -rf system/product/priv-app/PrivateComputeServices/PrivateComputeServices.apk
+# rm -rf system/product/priv-app/PrivateComputeServices/PrivateComputeServices.apk.prof
+# rm -rf system/product/app/com.google.mainline.adservices
+# rm -rf system/product/app/com.google.mainline.adservices/com.google.mainline.adservices.apk
+# rm -rf system/product/priv-app/AndroidSystemIntelligence
+# rm -rf system/product/priv-app/AndroidSystemIntelligence/AndroidSystemIntelligence.apk
+# rm -rf system/product/priv-app/AndroidSystemIntelligence/AndroidSystemIntelligence.apk.prof
+# rm -rf system/product/priv-app/FamilyLinkParentalControls
+# rm -rf system/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk
+# rm -rf system/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk.prof
 #DEBLOAT FOR M32
 rm -rf system/app/AASAservice
 rm -rf system/app/AASAservice/AASAservice.apk
@@ -513,13 +565,6 @@ rm -rf system/priv-app/KLMSAgent/KLMSAgent.apk.prof
 rm -rf system/priv-app/KPECore
 rm -rf system/priv-app/KPECore/KPECore.apk
 rm -rf system/priv-app/KPECore/KPECore.apk.prof
-rm -rf system/priv-app/KnoxCore/KnoxCore.apk
-rm -rf system/priv-app/KnoxCore/KnoxCore.apk.prof
-rm -rf system/priv-app/KnoxGuard/KnoxGuard.apk
-rm -rf system/priv-app/KnoxGuard/KnoxGuard.apk.prof
-rm -rf system/priv-app/KnoxPushManager
-rm -rf system/priv-app/KnoxPushManager/KnoxPushManager.apk
-rm -rf system/priv-app/KnoxPushManager/KnoxPushManager.apk.prof
 rm -rf system/priv-app/LocalTransport
 rm -rf system/priv-app/LocalTransport/LocalTransport.apk
 rm -rf system/priv-app/LocalTransport/LocalTransport.apk.prof
@@ -681,10 +726,6 @@ rm -rf system/priv-app/UltraDataSaving_O/lib/arm64/liblzma.so
 rm -rf system/priv-app/YourPhone_P1_5
 rm -rf system/priv-app/YourPhone_P1_5/YourPhone_P1_5.apk
 rm -rf system/priv-app/YourPhone_P1_5/YourPhone_P1_5.apk.prof
-rm -rf system/priv-app/knoxanalyticsagent/knoxanalyticsagent.apk
-rm -rf system/priv-app/knoxanalyticsagent/knoxanalyticsagent.apk.prof
-rm -rf system/priv-app/knoxvpnproxyhandler/knoxvpnproxyhandler.apk
-rm -rf system/priv-app/knoxvpnproxyhandler/knoxvpnproxyhandler.apk.prof
 # DEBLOAT FOR M52
 rm -rf system/app/BixbyWakeup
 rm -rf system/app/BixbyWakeup/BixbyWakeup.apk
