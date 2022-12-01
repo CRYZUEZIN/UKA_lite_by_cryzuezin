@@ -113,6 +113,9 @@ rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/com.qua
 rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib
 rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib/arm64
 rm -rf system/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib/arm64/libsystemhelper_jni.so
+rm -rf system/product/etc/permissions/privapp-permissions-provision.xml
+rm -rf system/etc/sysconfig/bixbyagent.xml
+rm -rf system/etc/sysconfig/facebook-hiddenapi-package-whitelist.xml
 #DEBLOAT FOR M52 (PRODUCT)
 # rm -rf system/product/app/Chrome
 # rm -rf system/product/app/Chrome/Chrome.apk
@@ -207,57 +210,10 @@ rm -rf system/product/priv-app/Velvet
 rm -rf system/product/priv-app/Velvet/Velvet.apk
 rm -rf system/product/priv-app/Velvet/Velvet.apk.prof
 #DEBLOAT FOR M53 (PRODUCT)
-# rm -rf system/product/app/Chrome
-# rm -rf system/product/app/Chrome/Chrome.apk
-# rm -rf system/product/app/Chrome/Chrome.apk.prof
-# rm -rf system/product/app/DuoStub
-# rm -rf system/product/app/DuoStub/DuoStub.apk
-# rm -rf system/product/app/DuoStub/DuoStub.apk.prof
-# rm -rf system/product/app/Gmail2
-# rm -rf system/product/app/Gmail2/Gmail2.apk
-# rm -rf system/product/app/Gmail2/Gmail2.apk.prof
-# rm -rf system/product/app/Maps
-# rm -rf system/product/app/Maps/Maps.apk
-# rm -rf system/product/app/Maps/Maps.apk.prof
-# rm -rf system/product/app/SpeechServicesByGoogle
-# rm -rf system/product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk
-# rm -rf system/product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk.prof
-# rm -rf system/product/app/YouTube
-# rm -rf system/product/app/YouTube/YouTube.apk
-# rm -rf system/product/app/YouTube/YouTube.apk.prof
 # rm -rf system/product/etc/permissions/privapp-permissions-provision.xml
-# rm -rf system/product/priv-app/AndroidAutoStub
-# rm -rf system/product/priv-app/AndroidAutoStub/AndroidAutoStub.apk
-# rm -rf system/product/priv-app/AndroidAutoStub/AndroidAutoStub.apk.prof
 # rm -rf system/product/priv-app/CarrierServices
 # rm -rf system/product/priv-app/CarrierServices/CarrierServices.apk
 # rm -rf system/product/priv-app/CarrierServices/CarrierServices.apk.prof
-# rm -rf system/product/priv-app/CarrierWifi
-# rm -rf system/product/priv-app/CarrierWifi/CarrierWifi.apk
-# rm -rf system/product/priv-app/CarrierWifi/CarrierWifi.apk.prof
-# rm -rf system/product/priv-app/Turbo
-# rm -rf system/product/priv-app/Turbo/Turbo.apk
-# rm -rf system/product/priv-app/Turbo/Turbo.apk.prof
-# rm -rf system/product/priv-app/Velvet
-# rm -rf system/product/priv-app/Velvet/Velvet.apk
-# rm -rf system/product/priv-app/Velvet/Velvet.apk.prof
-# rm -rf system/product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON
-# rm -rf system/product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON/HotwordEnrollmentOKGoogleEx3HEXAGON.apk
-# rm -rf system/product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON/HotwordEnrollmentOKGoogleEx3HEXAGON.apk.prof
-# rm -rf system/product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON
-# rm -rf system/product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON/HotwordEnrollmentXGoogleEx3HEXAGON.apk
-# rm -rf system/product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON/HotwordEnrollmentXGoogleEx3HEXAGON.apk.prof
-# rm -rf system/product/priv-app/PrivateComputeServices
-# rm -rf system/product/priv-app/PrivateComputeServices/PrivateComputeServices.apk
-# rm -rf system/product/priv-app/PrivateComputeServices/PrivateComputeServices.apk.prof
-# rm -rf system/product/app/com.google.mainline.adservices
-# rm -rf system/product/app/com.google.mainline.adservices/com.google.mainline.adservices.apk
-# rm -rf system/product/priv-app/AndroidSystemIntelligence
-# rm -rf system/product/priv-app/AndroidSystemIntelligence/AndroidSystemIntelligence.apk
-# rm -rf system/product/priv-app/AndroidSystemIntelligence/AndroidSystemIntelligence.apk.prof
-# rm -rf system/product/priv-app/FamilyLinkParentalControls
-# rm -rf system/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk
-# rm -rf system/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk.prof
 #DEBLOAT FOR M32
 rm -rf system/app/AASAservice
 rm -rf system/app/AASAservice/AASAservice.apk
@@ -921,3 +877,70 @@ rm -rf system/priv-app/ThemeStore/ThemeStore.apk.prof
 rm -rf system/priv-app/VolumeMonitorProvider_S
 rm -rf system/priv-app/VolumeMonitorProvider_S/VolumeMonitorProvider_S.apk
 rm -rf system/priv-app/VolumeMonitorProvider_S/VolumeMonitorProvider_S.apk.prof
+#DEBLOAT FOR A03S
+rm -rf system/app/BCService
+rm -rf system/app/BCService/BCService.apk
+rm -rf system/app/BCService/BCService.apk.prof
+rm -rf system/app/BasicDreams
+rm -rf system/app/BasicDreams/BasicDreams.apk
+rm -rf system/app/BasicDreams/BasicDreams.apk.prof
+rm -rf system/app/BluetoothTest
+rm -rf system/app/BluetoothTest/BluetoothTest.apk
+rm -rf system/app/BluetoothTest/BluetoothTest.apk.prof
+rm -rf system/app/FactoryAPP_O6
+rm -rf system/app/FactoryAPP_O6/FactoryAPP_O6.apk
+rm -rf system/app/FactoryAPP_O6/FactoryAPP_O6.apk.prof
+rm -rf system/app/PhotoTable
+rm -rf system/app/PhotoTable/PhotoTable.apk
+rm -rf system/app/PhotoTable/PhotoTable.apk.prof
+rm -rf system/app/SCPMClient
+rm -rf system/app/SCPMClient/SCPMClient.apk
+rm -rf system/app/SCPMClient/SCPMClient.apk.prof
+rm -rf system/app/SamsungTTS_no_vdata
+rm -rf system/app/SamsungTTS_no_vdata/SamsungTTS_no_vdata.apk
+rm -rf system/app/SamsungTTS_no_vdata/SamsungTTS_no_vdata.apk.prof
+rm -rf system/app/SimAppDialog
+rm -rf system/app/SimAppDialog/SimAppDialog.apk
+rm -rf system/app/SimAppDialog/SimAppDialog.apk.prof
+rm -rf system/app/SoundPicker_S
+rm -rf system/app/SoundPicker_S/SoundPicker_S.apk
+rm -rf system/app/SoundPicker_S/SoundPicker_S.apk.prof
+rm -rf system/priv-app/BuiltInPrintService
+rm -rf system/priv-app/BuiltInPrintService/BuiltInPrintService.apk
+rm -rf system/priv-app/BuiltInPrintService/BuiltInPrintService.apk.prof
+rm -rf system/priv-app/BuiltInPrintService/lib
+rm -rf system/priv-app/BuiltInPrintService/lib/arm64
+rm -rf system/priv-app/BuiltInPrintService/lib/arm64/libcups.so
+rm -rf system/priv-app/BuiltInPrintService/lib/arm64/libwfds.so
+rm -rf system/priv-app/CallLogBackup
+rm -rf system/priv-app/CallLogBackup/CallLogBackup.apk
+rm -rf system/priv-app/CallLogBackup/CallLogBackup.apk.prof
+rm -rf system/priv-app/DiagMonAgent8
+rm -rf system/priv-app/DiagMonAgent8/DiagMonAgent8.apk
+rm -rf system/priv-app/DiagMonAgent8/DiagMonAgent8.apk.prof
+rm -rf system/priv-app/DigitalWellbeing
+rm -rf system/priv-app/DigitalWellbeing/DigitalWellbeing.apk
+rm -rf system/priv-app/DigitalWellbeing/DigitalWellbeing.apk.prof
+rm -rf system/priv-app/DressRoom
+rm -rf system/priv-app/DressRoom/DressRoom.apk
+rm -rf system/priv-app/DressRoom/DressRoom.apk.prof
+rm -rf system/priv-app/DynamicLockscreen
+rm -rf system/priv-app/DynamicLockscreen/DynamicLockscreen.apk
+rm -rf system/priv-app/DynamicLockscreen/DynamicLockscreen.apk.prof
+rm -rf system/priv-app/PhotoEditor_Lite32
+rm -rf system/priv-app/PhotoEditor_Lite32/PhotoEditor_Lite32.apk
+rm -rf system/priv-app/RubinVersion3
+rm -rf system/priv-app/RubinVersion3/RubinVersion3.apk
+rm -rf system/priv-app/RubinVersion3/RubinVersion3.apk.prof
+rm -rf system/priv-app/SamSungCamera
+rm -rf system/priv-app/SamSungCamera/SamSungCamera.apk
+rm -rf system/priv-app/SamSungCamera/SamSungCamera.apk.prof
+rm -rf system/priv-app/SamsungDeviceHealthManagerService
+rm -rf system/priv-app/SamsungDeviceHealthManagerService/SamsungDeviceHealthManagerService.apk
+rm -rf system/priv-app/SamsungDeviceHealthManagerService/SamsungDeviceHealthManagerService.apk.prof
+rm -rf system/priv-app/SamsungPayStubMini
+rm -rf system/priv-app/SamsungPayStubMini/SamsungPayStubMini.apk
+rm -rf system/priv-app/SamsungPayStubMini/SamsungPayStubMini.apk.prof
+rm -rf system/priv-app/SoundAlive_S
+rm -rf system/priv-app/SoundAlive_S/SoundAlive_S.apk
+rm -rf system/priv-app/SoundAlive_S/SoundAlive_S.apk.prof
