@@ -152,10 +152,6 @@ rm -rf my_bigball/priv-app/PrivateComputeServices/PrivateComputeServices.apk
 rm -rf my_bigball/priv-app/PrivateComputeServices/oat
 rm -rf my_bigball/priv-app/PrivateComputeServices/oat/arm64
 rm -rf my_bigball/priv-app/PrivateComputeServices/oat/arm64/PrivateComputeServices.vdex
-rm -rf my_heytap/app/ARCore
-rm -rf my_heytap/app/ARCore/ARCore.apk
-rm -rf my_heytap/app/Chrome
-rm -rf my_heytap/app/Chrome/Chrome.apk
 rm -rf my_heytap/app/ChromePartnerProvider
 rm -rf my_heytap/app/ChromePartnerProvider/ChromePartnerProvider.apk
 rm -rf my_heytap/app/ChromePartnerProvider/oat
@@ -188,14 +184,6 @@ rm -rf my_heytap/app/StdSP/oat
 rm -rf my_heytap/app/StdSP/oat/arm64
 rm -rf my_heytap/app/StdSP/oat/arm64/StdSP.vdex
 rm -rf my_heytap/app/TrichromeLibrary
-rm -rf my_heytap/app/TrichromeLibrary/TrichromeLibrary.apk
-rm -rf my_heytap/app/TrichromeLibrary/oat
-rm -rf my_heytap/app/TrichromeLibrary/oat/arm
-rm -rf my_heytap/app/TrichromeLibrary/oat/arm/TrichromeLibrary.vdex
-rm -rf my_heytap/app/TrichromeLibrary/oat/arm64
-rm -rf my_heytap/app/TrichromeLibrary/oat/arm64/TrichromeLibrary.vdex
-rm -rf my_heytap/app/WebViewGoogle
-rm -rf my_heytap/app/WebViewGoogle/WebViewGoogle.apk
 rm -rf my_heytap/app/WifiBackupRestore
 rm -rf my_heytap/app/WifiBackupRestore/WifiBackupRestore.apk
 rm -rf my_heytap/app/WifiBackupRestore/oat
@@ -223,19 +211,6 @@ rm -rf my_heytap/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.
 rm -rf my_heytap/priv-app/FamilyLinkParentalControls/oat
 rm -rf my_heytap/priv-app/FamilyLinkParentalControls/oat/arm64
 rm -rf my_heytap/priv-app/FamilyLinkParentalControls/oat/arm64/FamilyLinkParentalControls.vdex
-# rm -rf my_heytap/priv-app/GmsCore
-# rm -rf my_heytap/priv-app/GmsCore/GmsCore.apk
-# rm -rf my_heytap/priv-app/GmsCore/m
-# rm -rf my_heytap/priv-app/GmsCore/m/independent
-# rm -rf my_heytap/priv-app/GmsCore/m/independent/AndroidPlatformServices.apk
-# rm -rf my_heytap/priv-app/GmsCore/m/independent/oat
-# rm -rf my_heytap/priv-app/GmsCore/m/independent/oat/arm64
-# rm -rf my_heytap/priv-app/GmsCore/m/independent/oat/arm64/AndroidPlatformServices.vdex
-# rm -rf my_heytap/priv-app/GmsCore/oat
-# rm -rf my_heytap/priv-app/GmsCore/oat/arm
-# rm -rf my_heytap/priv-app/GmsCore/oat/arm/GmsCore.vdex
-# rm -rf my_heytap/priv-app/GmsCore/oat/arm64
-# rm -rf my_heytap/priv-app/GmsCore/oat/arm64/GmsCore.vdex
 rm -rf my_heytap/priv-app/Velvet
 rm -rf my_heytap/priv-app/Velvet/Velvet.apk
 rm -rf my_heytap/priv-app/Velvet/oat
@@ -345,11 +320,6 @@ rm -rf my_stock/app/FloatAssistant/FloatAssistant.apk
 rm -rf my_stock/app/FloatAssistant/oat
 rm -rf my_stock/app/FloatAssistant/oat/arm64
 rm -rf my_stock/app/FloatAssistant/oat/arm64/FloatAssistant.vdex
-rm -rf my_stock/app/Games
-rm -rf my_stock/app/Games/Games.apk
-rm -rf my_stock/app/Games/oat
-rm -rf my_stock/app/Games/oat/arm64
-rm -rf my_stock/app/Games/oat/arm64/Games.vdex
 rm -rf my_stock/app/GlobalSearch
 rm -rf my_stock/app/GlobalSearch/GlobalSearch.apk
 rm -rf my_stock/app/Karaoke
@@ -1355,8 +1325,6 @@ rm -rf odm/etc/init/hw
 rm -rf odm/etc/init/hw/init.oplus.bsp_debug.rc
 rm -rf odm/etc/init/hw/init.oplus.display.rc
 rm -rf odm/etc/init/hw/init.oplus.wifi.rc
-rm -rf odm/etc/init/init.camera_upate.rc
-rm -rf odm/etc/init/init.multimedia.rc
 rm -rf odm/etc/init/init.network.rc
 rm -rf odm/etc/init/init.oppo.reserve.rc
 rm -rf odm/etc/init/init.oppo.sensor.rc
@@ -1424,8 +1392,6 @@ rm -rf odm/etc/lvimfs_params/LVIMFS_Parameter_ID7_MIC_Interview.txt
 rm -rf odm/etc/lvimfs_params/LVIMFS_Parameter_ID8_MIC_Unprocess.txt
 rm -rf odm/etc/lvimfs_params/LVIMFS_Parameter_ID9_MIC_Voice.txt
 rm -rf odm/etc/media_codecs_ffmpeg.xml
-rm -rf odm/etc/media_codecs_odm.xml
-rm -rf odm/etc/media_codecs_vendor_oplus.xml
 rm -rf odm/etc/mixer_paths.xml
 rm -rf odm/etc/modem_custom.cfg
 rm -rf odm/etc/modem_data.cfg
@@ -1433,13 +1399,11 @@ rm -rf odm/etc/modem_reg_pb.cfg
 rm -rf odm/etc/modem_rf.cfg
 rm -rf odm/etc/modem_simcard.cfg
 rm -rf odm/etc/modem_voice.cfg
-rm -rf odm/etc/multimedia_feature_switch.xml
 rm -rf odm/etc/oplus.fstab
 rm -rf odm/etc/orms
 rm -rf odm/etc/orms/orms_core_config.xml
 rm -rf odm/etc/orms/orms_permission_config.xml
 rm -rf odm/etc/permissions
-rm -rf odm/etc/permissions/android.hardware.camera.flash-autofocus.xml
 rm -rf odm/etc/permissions/android.hardware.sensor.light.xml
 rm -rf odm/etc/permissions/com.qcom.network.features.xml
 rm -rf odm/etc/permissions/vendor-oplus-hardware-biometrics-fido.xml
@@ -1951,8 +1915,6 @@ rm -rf odm/lib/libswresample.so
 rm -rf odm/lib/libswscale.so
 rm -rf odm/lib/libsymphony-cpu.so
 rm -rf odm/lib/libwvhidl.so
-rm -rf odm/lib/mediadrm
-rm -rf odm/lib/mediadrm/libwvdrmengine.so
 rm -rf odm/lib/rfsa
 rm -rf odm/lib/rfsa/adsp
 rm -rf odm/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
@@ -2118,8 +2080,6 @@ rm -rf odm/lib64/libaacvibrator.so
 rm -rf odm/lib64/libaisd.so
 rm -rf odm/lib64/libaiseg.so
 rm -rf odm/lib64/libalCFR.so
-rm -rf odm/lib64/mediadrm
-rm -rf odm/lib64/mediadrm/libwvdrmengine.so
 rm -rf odm/lib64/libancbase_rt_bokeh.so
 rm -rf odm/lib64/libancbase_segbase.so
 rm -rf odm/lib64/libancbase_segment.so
@@ -2366,12 +2326,6 @@ rm -rf system/system_ext/app/ModemTestMode/oat
 rm -rf system/system_ext/app/ModemTestMode/oat/arm64
 rm -rf system/system_ext/app/ModemTestMode/oat/arm64/ModemTestMode.odex
 rm -rf system/system_ext/app/ModemTestMode/oat/arm64/ModemTestMode.vdex
-rm -rf system/system_ext/app/NfcNci
-rm -rf system/system_ext/app/NfcNci/NfcNci.apk
-rm -rf system/system_ext/app/NfcNci/oat
-rm -rf system/system_ext/app/NfcNci/oat/arm64
-rm -rf system/system_ext/app/NfcNci/oat/arm64/NfcNci.odex
-rm -rf system/system_ext/app/NfcNci/oat/arm64/NfcNci.vdex
 rm -rf system/system_ext/app/Olc
 rm -rf system/system_ext/app/Olc/Olc.apk
 rm -rf system/system_ext/app/Olc/oat
