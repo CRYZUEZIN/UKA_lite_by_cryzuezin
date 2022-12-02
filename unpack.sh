@@ -13,6 +13,7 @@ debloat=$uka/bin/debloat
 config=$uka/bin/config
 contexts=$uka/bin/contexts
 phh=$uka/bin/phh
+
 chmod -R 755 $uka
 rm -rf $tmp
 rm -rf $editor
