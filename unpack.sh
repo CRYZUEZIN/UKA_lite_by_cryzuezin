@@ -82,16 +82,7 @@ sh $uka/bin/unpack/realmeui.sh
 fi
 
 echo " "
-#Renaming
-
-if [ -f $ajax/*.xml ]; then
-        sleep 2
-        echo "Renaming file .xml for .zip"
+echo "- Renaming the file to its original type.."
 mv $ajax/*.xml $ajax/*.xml.zip
-echo "done!!"                                                 fi                                                            
-  if [ -f $ajax/*.0 ]; then
-
-          echo "Renaming file .0 for 0.zip"
-  mv $ajax/*.0 $ajax/*.0.zip
-  echo " "
-  echo " done!!!"                                               fi
+mv $ajax/*.0 $ajax/*.0.zip
+echo " "
