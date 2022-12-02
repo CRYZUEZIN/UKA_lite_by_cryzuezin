@@ -13,6 +13,11 @@ debloat=$uka/bin/debloat
 config=$uka/bin/config
 contexts=$uka/bin/contexts
 phh=$uka/bin/phh
+chmod -R 755 $uka
+rm -rf $tmp
+rm -rf $editor
+mkdir -p $tmp
+mkdir -p $editor
 
 clear
 echo -en "\E[32;1m"
