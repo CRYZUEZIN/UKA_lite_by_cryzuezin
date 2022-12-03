@@ -261,7 +261,7 @@ rm -rf system/product/priv-app/Velvet/Velvet.apk.prof
 # rm -rf system/product/priv-app/FamilyLinkParentalControls
 # rm -rf system/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk
 # rm -rf system/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk.prof
-#DEBLOAT FOR ONEUI 5.0 (M32 AND M52)
+#DEBLOAT FOR M32 (ONE UI 5.0)
 rm -rf system/app/AASAservice
 rm -rf system/app/AASAservice/AASAservice.apk
 rm -rf system/app/AASAservice/AASAservice.apk.prof
@@ -746,7 +746,7 @@ rm -rf system/priv-app/knoxanalyticsagent/knoxanalyticsagent.apk.prof
 rm -rf system/priv-app/knoxvpnproxyhandler
 rm -rf system/priv-app/knoxvpnproxyhandler/knoxvpnproxyhandler.apk
 rm -rf system/priv-app/knoxvpnproxyhandler/knoxvpnproxyhandler.apk.prof
-#DEBLOAT FOR ONE UI 4.1 (A03S AND M53)
+#DEBLOAT FOR A03S AND M53 (ONE UI 4.1)
 rm -rf system/app/BCService
 rm -rf system/app/BCService/BCService.apk
 rm -rf system/app/BCService/BCService.apk.prof
