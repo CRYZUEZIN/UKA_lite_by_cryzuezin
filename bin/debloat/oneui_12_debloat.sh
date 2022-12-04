@@ -881,9 +881,6 @@ rm -rf system/priv-app/StickerFaceARAvatar/StickerFaceARAvatar.apk.prof
 rm -rf system/priv-app/SumeNNService
 rm -rf system/priv-app/SumeNNService/SumeNNService.apk
 rm -rf system/priv-app/SumeNNService/SumeNNService.apk.prof
-rm -rf system/priv-app/SystemUIBixby2
-rm -rf system/priv-app/SystemUIBixby2/SystemUIBixby2.apk
-rm -rf system/priv-app/SystemUIBixby2/SystemUIBixby2.apk.prof
 rm -rf system/priv-app/SystemUpdate
 rm -rf system/priv-app/SystemUpdate/SystemUpdate.apk
 rm -rf system/priv-app/SystemUpdate/SystemUpdate.apk.prof
