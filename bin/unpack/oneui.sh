@@ -154,10 +154,6 @@ cp -frp $editor/vendor/etc/group $editor/system/system/cryzuezin
 cp -frp $editor/vendor/etc/passwd $editor/system/system/cryzuezin
 rm -rf $editor/vendor
 
-rm -rf $editor/config/system/system_file_contexts
-cp $contexts/oneui_file_contexts $editor/config/system
-cd $editor/config/system && mv oneui_file_contexts system_file_contexts
-
 echo "- Merging APEX, into main folder.."
 cp -frp $editor/system/system/system_ext/apex/* $editor/system/system/apex
 rm -rf $editor/system/system/system_ext/apex
@@ -188,14 +184,31 @@ sed -i "s+devices/+system/+" $editor/config/devices/devices_fs_config
 cat $editor/config/devices/devices_fs_config >> $editor/config/system/system_fs_config
 cat $phh/phh_fs_config >> $editor/config/system/system_fs_config
 sed -i "s+0 0 0777+0 0 0644+" $editor/config/system/system_fs_config
-cat $config/oneui_fs_config >> $editor/config/system/system_fs_config
 rm -rf $tmp
 mkdir -p $tmp
 
+if [ -d $editor/system/system/priv-app/AODService_v70 ]; then
+rm -rf $editor/config/system/system_file_contexts
+cp $contexts/oneui_12_contexts $editor/config/system
+cd $editor/config/system && mv oneui_12_contexts system_file_contexts
+cat $config/oneui_12_config >> $editor/config/system/system_fs_config
+
 echo "- Doing Debloat, set it in $debloat"; sleep 5
 #Debloat for OneUI
-cd $editor/system && sh $debloat/oneui_debloat.sh
+cd $editor/system && sh $debloat/oneui_12_debloat.sh
 echo " "
+
+else
+rm -rf $editor/config/system/system_file_contexts
+cp $contexts/oneui_13_contexts $editor/config/system
+cd $editor/config/system && mv oneui_13_contexts system_file_contexts
+cat $config/oneui_13_config >> $editor/config/system/system_fs_config
+
+echo "- Doing Debloat, set it in $debloat"; sleep 5
+#Debloat for OneUI
+cd $editor/system && sh $debloat/oneui_13_debloat.sh
+echo " "
+fi
 
 echo "- Detected Model: Samsung"
 echo " "
