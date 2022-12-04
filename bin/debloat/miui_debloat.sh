@@ -567,13 +567,8 @@ rm -rf product/data-app/YTMusic
 rm -rf product/data-app/YTMusic/YTMusic.apk
 rm -rf product/data-app/wps_lite
 rm -rf product/data-app/wps_lite/wps_lite.apk
-rm -rf product/etc/selinux/mapping/26.0.cil
-rm -rf product/etc/selinux/mapping/27.0.cil
-rm -rf product/etc/selinux/mapping/28.0.cil
-rm -rf product/etc/selinux/mapping/29.0.cil
-rm -rf product/etc/selinux/mapping/30.0.cil
+rm -rf product/etc/selinux/mapping
 rm -rf product/etc/device_features
-rm -rf product/etc/selinux/mapping/31.0.cil
 rm -rf product/priv-app/AndroidAutoStub
 rm -rf product/priv-app/AndroidAutoStub/AndroidAutoStub.apk
 rm -rf product/priv-app/AndroidAutoStub/oat
@@ -659,4 +654,3 @@ rm -rf system_ext/priv-app/dpmserviceapp/oat/arm64
 rm -rf system_ext/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.odex
 rm -rf system_ext/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.vdex
 rm -rf xbin/system_perf_init
-rm -rf system_ext/framework/miui-framework.jar
