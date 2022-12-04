@@ -4,7 +4,7 @@ rm -rf system/etc/init/cppreopts.rc
 rm -rf system/etc/init/otapreopt.rc
 rm -rf system/etc/init/recovery-persist.rc
 rm -rf system/etc/init/recovery-refresh.rc
-rm -rf systemetc/init/update_engine.rc
+rm -rf system/etc/init/update_engine.rc
 rm -rf system/etc/init/update_verifier.rc
 rm -rf prism/app
 rm -rf prism/priv-app
