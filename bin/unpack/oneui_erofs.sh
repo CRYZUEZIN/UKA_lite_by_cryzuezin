@@ -1,8 +1,8 @@
 #!/system/bin/sh
 
 #PATH
-ajax=/sdcard
-uka=/data/local/uka-lite
+ajax=`pwd`
+uka=`pwd`
 #BIN
 bin=$uka/bin/arm
 bb=$bin/busybox
@@ -13,11 +13,6 @@ debloat=$uka/bin/debloat
 contexts=$uka/bin/contexts
 config=$uka/bin/config
 phh=$uka/bin/phh
-if [ -f /data/data/com.termux/files/usr/bin/python ]; then
-py=/data/data/com.termux/files/usr/bin/python
-else
-py=/data/local/python39/usr/bin/python3
-fi
 
 echo "Detected Model: Samsung (erofs)"
 echo " "
@@ -109,8 +104,8 @@ ln -s /apex/com.android.vndk.v32/lib64 $tmp/system/system/lib64
 mv lib64 vndk-sp-32
 
 echo "- Extracting Packages for GSI.."
-$py $pybin/imgextractor.py $phh/phh_patch.img $tmp
-$py $pybin/imgextractor.py $phh/devices.img $tmp
+python3 $pybin/imgextractor.py $phh/phh_patch.img $tmp
+python3 $pybin/imgextractor.py $phh/devices.img $tmp
 echo " "
 echo "- Disabling DM Verity, and enabling GSI functions.."
 sed -i "s+ro.build.system_root_image=false+ro.build.system_root_image=true+" $tmp/system/system/build.prop
@@ -176,7 +171,7 @@ echo " "
 echo "- Extracting the Images (ext4).."
 echo " "
 
-$py $pybin/imgextractor.py $ajax/prism.img $editor
+python3 $pybin/imgextractor.py $ajax/prism.img $editor
 full_avb=$($bin/avbtool info_image --image $ajax/prism.img 2> $editor/config/prism/prism_avb.log)
 echo $full_avb > $editor/config/prism/prism_avb.img
 rm -rf $editor/config/prism/prism_avb.img
@@ -186,7 +181,7 @@ sed -i "s+prism/+system/prism/+" $editor/config/prism/prism_fs_config
 cat $editor/config/prism/prism_fs_config >> $editor/config/system_fs_config
 mv -f $editor/prism $editor/system
 
-$py $pybin/imgextractor.py $ajax/optics.img $editor
+python3 $pybin/imgextractor.py $ajax/optics.img $editor
 full_avb=$($bin/avbtool info_image --image $ajax/optics.img 2> $editor/config/optics/optics_avb.log)
 echo $full_avb > $editor/config/optics/optics_avb.img
 rm -rf $editor/config/optics/optics_avb.img
