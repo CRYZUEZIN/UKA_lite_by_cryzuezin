@@ -163,10 +163,6 @@ cp -frp $tmp/vendor/etc/group $tmp/system/system/cryzuezin
 cp -frp $tmp/vendor/etc/passwd $tmp/system/system/cryzuezin
 rm -rf $tmp/vendor
 
-rm -rf $tmp/config/*file_contexts
-cp $contexts/oneui_file_contexts $tmp/config
-cd $tmp/config && mv oneui_file_contexts system_file_contexts
-
 echo "- Merging APEX, into main folder.."
 cp -frp $tmp/system/system/system_ext/apex/* $tmp/system/system/apex
 rm -rf $tmp/system/system/system_ext/apex
@@ -200,13 +196,30 @@ sed -i "s+devices/+system/+" $editor/config/devices/devices_fs_config
 cat $editor/config/devices/devices_fs_config >> $editor/config/system_fs_config
 cat $phh/phh_fs_config >> $editor/config/system_fs_config
 sed -i "s+0 0 0777+0 0 0644+" $editor/config/system_fs_config
-cat $config/oneui_fs_config >> $editor/config/system_fs_config
 echo " "
 
-echo "- Doing Debloat, set it in $bin"; sleep 5
-# Debloat for OneUI
-cd $tmp/system && sh $debloat/oneui_debloat.sh
+if [ -d $tmp/system/system/priv-app/AODService_v70 ]; then
+rm -rf $tmp/config/*file_contexts
+cp $contexts/oneui_12_contexts $tmp/config
+cd $tmp/config/system && mv oneui_12_contexts system_file_contexts
+cat $config/oneui_12_config >> $tmp/config/system/system_fs_config
+
+echo "- Doing Debloat, set it in $debloat"; sleep 5
+#Debloat for OneUI
+cd $tmp/system && sh $debloat/oneui_12_debloat.sh
 echo " "
+
+else
+rm -rf $tmp/config/*file_contexts
+cp $contexts/oneui_13_contexts $tmp/config
+cd $tmp/config/system && mv oneui_13_contexts system_file_contexts
+cat $config/oneui_13_config >> $tmp/config/system/system_fs_config
+
+echo "- Doing Debloat, set it in $debloat"; sleep 5
+#Debloat for OneUI
+cd $tmp/system && sh $debloat/oneui_13_debloat.sh
+echo " "
+fi
 
 echo "- Detected Model: Samsung (erofs)"
 echo " "
