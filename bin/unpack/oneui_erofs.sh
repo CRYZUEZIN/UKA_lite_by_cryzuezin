@@ -197,18 +197,10 @@ cat $phh/phh_fs_config >> $editor/config/system_fs_config
 sed -i "s+0 0 0777+0 0 0644+" $editor/config/system_fs_config
 echo " "
 
-if [ -d $tmp/system/system/priv-app/AODService_v70 ]; then
 echo "- Doing Debloat, set it in $debloat"; sleep 5
 #Debloat for OneUI
-cd $tmp/system && sh $debloat/oneui_12_debloat.sh
+cd $tmp/system && sh $debloat/oneui_debloat.sh
 echo " "
-
-else
-echo "- Doing Debloat, set it in $debloat"; sleep 5
-#Debloat for OneUI
-cd $tmp/system && sh $debloat/oneui_13_debloat.sh
-echo " "
-fi
 
 echo "- Detected Model: Samsung (erofs)"
 echo " "
