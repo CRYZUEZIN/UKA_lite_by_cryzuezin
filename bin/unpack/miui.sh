@@ -147,6 +147,7 @@ sed -i "s+ro.config.knox.ucm=1+#+" $editor/system/system/build.prop
 sed -i "s+security.perf_harden=1+security.perf_harden=false+" $editor/system/system/build.prop
 sed -i "s+ro.adb.secure=1+ro.adb.secure=0+" $editor/system/system/build.prop
 cat $phh/fix.prop >> $editor/system/system/build.prop
+cat $phh/phh_file_contexts >> $editor/config/system/system_file_contexts
 echo " "
 
 python3 $pybin/imgextractor.py $tmp/product.img $editor
@@ -204,10 +205,6 @@ cp -frp $editor/vendor/overlay/* $editor/system/system/cryzuezin/vo
 cp -frp $editor/vendor/etc/group $editor/system/system/cryzuezin
 cp -frp $editor/vendor/etc/passwd $editor/system/system/cryzuezin
 rm -rf $editor/vendor
-
-rm -rf $editor/config/system/system_file_contexts
-cp $contexts/miui_file_contexts $editor/config/system
-cd $editor/config/system && mv miui_file_contexts system_file_contexts
 
 echo "- Merging APEX, into main folder.."
 cp -frp $editor/system/system/system_ext/apex/* $editor/system/system/apex
