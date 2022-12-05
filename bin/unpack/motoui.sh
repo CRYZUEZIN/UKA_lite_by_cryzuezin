@@ -190,7 +190,6 @@ sed -i "s+devices/+system/+" $editor/config/devices/devices_fs_config
 cat $editor/config/devices/devices_fs_config >> $editor/config/system/system_fs_config
 cat $phh/phh_fs_config >> $editor/config/system/system_fs_config
 sed -i "s+0 0 0777+0 0 0644+" $editor/config/system/system_fs_config
-cat $config/motoui_fs_config >> $editor/config/system/system_fs_config
 cp -frp $editor/vendor/overlay/* $editor/system/system/product/overlay
 #SECONDARY FILES FOR MOTOUI
 cp -frp $editor/system/system/bin/init $editor

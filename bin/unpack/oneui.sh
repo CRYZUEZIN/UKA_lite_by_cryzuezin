@@ -10,8 +10,6 @@ tmp=$uka/bin/tmp
 pybin=$uka/bin/python
 editor=$uka/editor
 debloat=$uka/bin/debloat
-contexts=$uka/bin/contexts
-config=$uka/bin/config
 phh=$uka/bin/phh
 
 echo "Detected Model: Samsung"
@@ -189,16 +187,12 @@ rm -rf $tmp
 mkdir -p $tmp
 
 if [ -d $editor/system/system/priv-app/AODService_v70 ]; then
-cat $config/oneui_12_config >> $editor/config/system/system_fs_config
-
 echo "- Doing Debloat, set it in $debloat"; sleep 5
 #Debloat for OneUI
 cd $editor/system && sh $debloat/oneui_12_debloat.sh
 echo " "
 
 else
-cat $config/oneui_13_config >> $editor/config/system/system_fs_config
-
 echo "- Doing Debloat, set it in $debloat"; sleep 5
 #Debloat for OneUI
 cd $editor/system && sh $debloat/oneui_13_debloat.sh

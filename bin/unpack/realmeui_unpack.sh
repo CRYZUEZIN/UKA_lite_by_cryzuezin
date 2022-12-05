@@ -10,8 +10,6 @@ tmp=$uka/bin/tmp
 pybin=$uka/bin/python
 editor=$uka/editor
 debloat=$uka/bin/debloat
-contexts=$uka/bin/contexts
-config=$uka/bin/config
 phh=$uka/bin/phh
 
 echo -en "\E[37;1m"

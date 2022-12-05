@@ -10,8 +10,6 @@ tmp=$uka/bin/tmp
 pybin=$uka/bin/python
 editor=$uka/editor
 debloat=$uka/bin/debloat
-contexts=$uka/bin/contexts
-config=$uka/bin/config
 phh=$uka/bin/phh
 
 echo "- Detected Model: Realme"
@@ -115,6 +113,7 @@ sed -i "s+ro.config.knox.ucm=1+#+" $tmp/system/system/build.prop
 sed -i "s+security.perf_harden=1+security.perf_harden=false+" $tmp/system/system/build.prop
 sed -i "s+ro.adb.secure=1+ro.adb.secure=0+" $tmp/system/system/build.prop
 cat $phh/fix.prop >> $tmp/system/system/build.prop
+cat $phh/phh_file_contexts >> $tmp/config/system_file_contexts
 echo " "
 
 python3 $pybin/imgextractor.py $tmp/product.img $tmp
@@ -250,9 +249,8 @@ sed -i "s+devices/+system/+" $tmp/config/devices/devices_fs_config
 cat $tmp/config/devices/devices_fs_config >> $tmp/config/system_fs_config
 cat $phh/phh_fs_config >> $tmp/config/system_fs_config
 sed -i "s+0 0 0777+0 0 0644+" $tmp/config/system_fs_config
-cat $config/miui_fs_config >> $tmp/config/system_fs_config
 
-echo "- Doing Debloat, set it in $bin"; sleep 5
+echo "- Doing Debloat, set it in $debloat"; sleep 5
 # Debloat for Realme
 cd $tmp/system && sh $debloat/realmeui_debloat.sh
 echo " "

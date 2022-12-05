@@ -10,8 +10,6 @@ tmp=$uka/bin/tmp
 pybin=$uka/bin/python
 editor=$uka/editor
 debloat=$uka/bin/debloat
-contexts=$uka/bin/contexts
-config=$uka/bin/config
 phh=$uka/bin/phh
 
 echo "Detected Model: Samsung (erofs)"
@@ -125,6 +123,7 @@ sed -i "s+ro.config.knox.ucm=1+#+" $tmp/system/system/build.prop
 sed -i "s+security.perf_harden=1+security.perf_harden=false+" $tmp/system/system/build.prop
 sed -i "s+ro.adb.secure=1+ro.adb.secure=0+" $tmp/system/system/build.prop
 cat $phh/fix.prop >> $tmp/system/system/build.prop
+cat $phh/phh_file_contexts >> $tmp/config/system_file_contexts
 echo " "
 
 full_avb=$($bin/avbtool info_image --image $tmp/product.img 2> $tmp/config/product_avb.log)
@@ -199,22 +198,12 @@ sed -i "s+0 0 0777+0 0 0644+" $editor/config/system_fs_config
 echo " "
 
 if [ -d $tmp/system/system/priv-app/AODService_v70 ]; then
-rm -rf $tmp/config/*file_contexts
-cp $contexts/oneui_12_contexts $tmp/config
-cd $tmp/config && mv oneui_12_contexts system_file_contexts
-cat $config/oneui_12_config >> $tmp/config/system_fs_config
-
 echo "- Doing Debloat, set it in $debloat"; sleep 5
 #Debloat for OneUI
 cd $tmp/system && sh $debloat/oneui_12_debloat.sh
 echo " "
 
 else
-rm -rf $tmp/config/*file_contexts
-cp $contexts/oneui_13_contexts $tmp/config
-cd $tmp/config && mv oneui_13_contexts system_file_contexts
-cat $config/oneui_13_config >> $tmp/config/system_fs_config
-
 echo "- Doing Debloat, set it in $debloat"; sleep 5
 #Debloat for OneUI
 cd $tmp/system && sh $debloat/oneui_13_debloat.sh

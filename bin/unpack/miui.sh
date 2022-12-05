@@ -10,8 +10,6 @@ tmp=$uka/bin/tmp
 pybin=$uka/bin/python
 editor=$uka/editor
 debloat=$uka/bin/debloat
-contexts=$uka/bin/contexts
-config=$uka/bin/config
 phh=$uka/bin/phh
 
 echo "- Detected Model: Xioami"
@@ -195,7 +193,6 @@ sed -i "s+devices/+system/+" $editor/config/devices/devices_fs_config
 cat $editor/config/devices/devices_fs_config >> $editor/config/system/system_fs_config
 cat $phh/phh_fs_config >> $editor/config/system/system_fs_config
 sed -i "s+0 0 0777+0 0 0644+" $editor/config/system/system_fs_config
-cat $config/miui_fs_config >> $editor/config/system/system_fs_config
 cp -frp $editor/vendor/overlay/* $editor/system/system/product/overlay
 cp -frp $editor/phh_patch/* $editor/system
 cp -frp $editor/devices/* $editor/system
