@@ -10,8 +10,6 @@ tmp=$uka/bin/tmp
 pybin=$uka/bin/python
 editor=$uka/editor
 debloat=$uka/bin/debloat
-config=$uka/bin/config
-contexts=$uka/bin/contexts
 phh=$uka/bin/phh
 chmod -R 755 $uka
 rm -rf $tmp
