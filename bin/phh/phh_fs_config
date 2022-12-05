@@ -16,3 +16,5 @@ system/system/lib64/vndk-31 0 0 0644 /apex/com.android.vndk.v31/lib64
 system/system/lib64/vndk-sp-31 0 0 0644 /apex/com.android.vndk.v31/lib64
 system/system/lib64/vndk-32 0 0 0644 /apex/com.android.vndk.v32/lib64
 system/system/lib64/vndk-sp-32 0 0 0644 /apex/com.android.vndk.v32/lib64
+system/product 0 0 0644 /system/product
+system/system_ext 0 0 0644 /system/product
