@@ -162,10 +162,6 @@ cp -frp $tmp/vendor/etc/group $tmp/system/system/cryzuezin
 cp -frp $tmp/vendor/etc/passwd $tmp/system/system/cryzuezin
 rm -rf $tmp/vendor
 
-rm -rf $tmp/config/*file_contexts
-cp $contexts/miui_file_contexts $tmp/config
-cd $tmp/config && mv miui_file_contexts system_file_contexts
-
 echo "- Merging APEX, into main folder.."
 cp -frp $tmp/system/system/system_ext/apex/* $tmp/system/system/apex
 rm -rf $tmp/system/system/system_ext/apex
