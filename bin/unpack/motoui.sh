@@ -191,11 +191,6 @@ cat $editor/config/devices/devices_fs_config >> $editor/config/system/system_fs_
 cat $phh/phh_fs_config >> $editor/config/system/system_fs_config
 sed -i "s+0 0 0777+0 0 0644+" $editor/config/system/system_fs_config
 cp -frp $editor/vendor/overlay/* $editor/system/system/product/overlay
-#SECONDARY FILES FOR MOTOUI
-cp -frp $editor/system/system/bin/init $editor
-cp -frp $editor/system/system/lib64/libfs_mgr.so $editor
-cp -frp $editor/system/system/lib64/libfs_mgr_binder.so $editor
-#
 cp -frp $editor/phh_patch/* $editor/system
 cp -frp $editor/devices/* $editor/system
 rm -rf $editor/phh_patch
@@ -203,12 +198,6 @@ rm -rf $editor/devices
 cp -frp $editor/vendor/overlay/* $editor/system/system/cryzuezin/vo
 cp -frp $editor/vendor/etc/group $editor/system/system/cryzuezin
 cp -frp $editor/vendor/etc/passwd $editor/system/system/cryzuezin
-#SECONDARY FILES FOR MOTOUI
-cp -frp $editor/init $editor/system/system/bin
-cp -frp $phh/rw-system.sh $editor/system/system/bin
-cp -frp $editor/libfs_mgr.so $editor/system/system/lib64
-cp -frp $editor/libfs_mgr_binder.so $editor/system/system/lib64
-#
 rm -rf $editor/vendor
 
 echo "- Merging APEX, into main folder.."
