@@ -6,6 +6,181 @@ rm -rf etc/init/recovery-persist.rc
 rm -rf etc/init/recovery-refresh.rc
 rm -rf etc/init/update_engine.rc
 rm -rf etc/init/update_verifier.rc
+rm -rf hidden
+rm -rf preload
+rm -rf tts
+rm -rf voicecommanddata
+rm -rf saiv
+rm -rf product/etc/selinux/mapping
+rm -rf system_ext/etc/selinux/mapping
+rm -rf etc/sysconfig/bixbyagent.xml
+rm -rf etc/permissions/securelock.xml
+rm -rf etc/sysconfig/facebook-hiddenapi-package-whitelist.xml
+rm -rf product/etc/permissions/privapp-permissions-provision.xml
+#DEBLOAT FOR CRYZUEZIN (ONE UI)
+rm -rf priv-app/knoxanalyticsagent
+rm -rf priv-app/KnoxGuard
+rm -rf priv-app/KnoxCore
+rm -rf priv-app/knoxvpnproxyhandler
+rm -rf priv-app/SDMConfig
+rm -rf priv-app/SetupIndiaServicesTnC
+rm -rf product/priv-app/Messages
+# rm -rf system_ext/priv-app/SetupWizard
+rm -rf system_ext/app/QdcmFF
+rm -rf system_ext/app/QdcmFF/QdcmFF.apk
+rm -rf system_ext/priv-app/GoogleFeedback
+rm -rf system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk
+rm -rf system_ext/priv-app/com.qualcomm.qti.services.systemhelper
+rm -rf system_ext/priv-app/com.qualcomm.qti.services.systemhelper/com.qualcomm.qti.services.systemhelper.apk
+rm -rf system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib
+rm -rf system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib/arm64
+rm -rf system_ext/priv-app/com.qualcomm.qti.services.systemhelper/lib/arm64/libsystemhelper_jni.so
+#DEBLOAT FOR M52 (PRODUCT)
+# rm -rf product/app/Chrome
+# rm -rf product/app/Chrome/Chrome.apk
+# rm -rf product/app/Chrome/Chrome.apk.prof
+# rm -rf product/app/DuoStub
+# rm -rf product/app/DuoStub/DuoStub.apk
+# rm -rf product/app/DuoStub/DuoStub.apk.prof
+# rm -rf product/app/Gmail2
+# rm -rf product/app/Gmail2/Gmail2.apk
+# rm -rf product/app/Gmail2/Gmail2.apk.prof
+# rm -rf product/app/Maps
+# rm -rf product/app/Maps/Maps.apk
+# rm -rf product/app/Maps/Maps.apk.prof
+# rm -rf product/app/SpeechServicesByGoogle
+# rm -rf product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk
+# rm -rf product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk.prof
+# rm -rf product/app/TrichromeLibrary
+# rm -rf product/app/TrichromeLibrary/TrichromeLibrary.apk
+# rm -rf product/app/TrichromeLibrary/TrichromeLibrary.apk.prof
+# rm -rf product/app/WebViewGoogle
+# rm -rf product/app/WebViewGoogle/WebViewGoogle.apk
+# rm -rf product/app/WebViewGoogle/WebViewGoogle.apk.prof
+# rm -rf product/app/YouTube
+# rm -rf product/app/YouTube/YouTube.apk
+# rm -rf product/app/YouTube/YouTube.apk.prof
+# rm -rf product/app/com.google.mainline.adservices
+# rm -rf product/app/com.google.mainline.adservices/com.google.mainline.adservices.apk
+# rm -rf product/priv-app/AndroidAutoStub
+# rm -rf product/priv-app/AndroidAutoStub/AndroidAutoStub.apk
+# rm -rf product/priv-app/AndroidAutoStub/AndroidAutoStub.apk.prof
+# rm -rf product/priv-app/AndroidSystemIntelligence
+# rm -rf product/priv-app/AndroidSystemIntelligence/AndroidSystemIntelligence.apk
+# rm -rf product/priv-app/AndroidSystemIntelligence/AndroidSystemIntelligence.apk.prof
+# rm -rf product/priv-app/CarrierWifi
+# rm -rf product/priv-app/CarrierWifi/CarrierWifi.apk
+# rm -rf product/priv-app/CarrierWifi/CarrierWifi.apk.prof
+# rm -rf product/priv-app/FamilyLinkParentalControls
+# rm -rf product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk
+# rm -rf product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk.prof
+# rm -rf product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON
+# rm -rf product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON/HotwordEnrollmentOKGoogleEx3HEXAGON.apk
+# rm -rf product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON/HotwordEnrollmentOKGoogleEx3HEXAGON.apk.prof
+# rm -rf product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON
+# rm -rf product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON/HotwordEnrollmentXGoogleEx3HEXAGON.apk
+# rm -rf product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON/HotwordEnrollmentXGoogleEx3HEXAGON.apk.prof
+# rm -rf product/priv-app/Messages
+# rm -rf product/priv-app/Messages/Messages.apk
+# rm -rf product/priv-app/Messages/Messages.apk.prof
+# rm -rf product/priv-app/PrivateComputeServices
+# rm -rf product/priv-app/PrivateComputeServices/PrivateComputeServices.apk
+# rm -rf product/priv-app/PrivateComputeServices/PrivateComputeServices.apk.prof
+# rm -rf product/priv-app/Turbo
+# rm -rf product/priv-app/Turbo/Turbo.apk
+# rm -rf product/priv-app/Turbo/Turbo.apk.prof
+# rm -rf product/priv-app/Velvet
+# rm -rf product/priv-app/Velvet/Velvet.apk
+# rm -rf product/priv-app/Velvet/Velvet.apk.prof
+#DEBLOAT FOR M32 (PRODUCT)
+# rm -rf product/app/DuoStub
+# rm -rf product/app/DuoStub/DuoStub.apk
+# rm -rf product/app/DuoStub/DuoStub.apk.prof
+# rm -rf product/app/Gmail2
+# rm -rf product/app/Gmail2/Gmail2.apk
+# rm -rf product/app/Gmail2/Gmail2.apk.prof
+# rm -rf product/app/Maps
+# rm -rf product/app/Maps/Maps.apk
+# rm -rf product/app/Maps/Maps.apk.prof
+# rm -rf product/app/SpeechServicesByGoogle
+# rm -rf product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk
+# rm -rf product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk.prof
+# rm -rf product/app/YouTube
+# rm -rf product/app/YouTube/YouTube.apk
+# rm -rf product/app/YouTube/YouTube.apk.prof
+# rm -rf product/priv-app/AndroidAutoStub
+# rm -rf product/priv-app/AndroidAutoStub/AndroidAutoStub.apk
+# rm -rf product/priv-app/AndroidAutoStub/AndroidAutoStub.apk.prof
+# rm -rf product/priv-app/CarrierWifi
+# rm -rf product/priv-app/CarrierWifi/CarrierWifi.apk
+# rm -rf product/priv-app/CarrierWifi/CarrierWifi.apk.prof
+# rm -rf product/priv-app/FamilyLinkParentalControls
+# rm -rf product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk
+# rm -rf product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk.prof
+# rm -rf product/priv-app/Messages/Messages.apk
+# rm -rf product/priv-app/Messages/Messages.apk.prof
+# rm -rf product/priv-app/PrivateComputeServices
+# rm -rf product/priv-app/PrivateComputeServices/PrivateComputeServices.apk
+# rm -rf product/priv-app/PrivateComputeServices/PrivateComputeServices.apk.prof
+# rm -rf product/priv-app/Turbo
+# rm -rf product/priv-app/Turbo/Turbo.apk
+# rm -rf product/priv-app/Turbo/Turbo.apk.prof
+# rm -rf product/priv-app/Velvet
+# rm -rf product/priv-app/Velvet/Velvet.apk
+# rm -rf product/priv-app/Velvet/Velvet.apk.prof
+#DEBLOAT FOR M53 (PRODUCT)
+rm -rf product/app/Chrome
+rm -rf product/app/Chrome/Chrome.apk
+rm -rf product/app/Chrome/Chrome.apk.prof
+rm -rf product/app/DuoStub
+rm -rf product/app/DuoStub/DuoStub.apk
+rm -rf product/app/DuoStub/DuoStub.apk.prof
+rm -rf product/app/Gmail2
+rm -rf product/app/Gmail2/Gmail2.apk
+rm -rf product/app/Gmail2/Gmail2.apk.prof
+rm -rf product/app/Maps
+rm -rf product/app/Maps/Maps.apk
+rm -rf product/app/Maps/Maps.apk.prof
+rm -rf product/app/SpeechServicesByGoogle
+rm -rf product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk
+rm -rf product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk.prof
+rm -rf product/app/YouTube
+rm -rf product/app/YouTube/YouTube.apk
+rm -rf product/app/YouTube/YouTube.apk.prof
+rm -rf product/etc/permissions/privapp-permissions-provision.xml
+rm -rf product/priv-app/AndroidAutoStub
+rm -rf product/priv-app/AndroidAutoStub/AndroidAutoStub.apk
+rm -rf product/priv-app/AndroidAutoStub/AndroidAutoStub.apk.prof
+rm -rf product/priv-app/CarrierServices
+rm -rf product/priv-app/CarrierServices/CarrierServices.apk
+rm -rf product/priv-app/CarrierServices/CarrierServices.apk.prof
+rm -rf product/priv-app/CarrierWifi
+rm -rf product/priv-app/CarrierWifi/CarrierWifi.apk
+rm -rf product/priv-app/CarrierWifi/CarrierWifi.apk.prof
+rm -rf product/priv-app/Turbo
+rm -rf product/priv-app/Turbo/Turbo.apk
+rm -rf product/priv-app/Turbo/Turbo.apk.prof
+rm -rf product/priv-app/Velvet
+rm -rf product/priv-app/Velvet/Velvet.apk
+rm -rf product/priv-app/Velvet/Velvet.apk.prof
+rm -rf product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON
+rm -rf product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON/HotwordEnrollmentOKGoogleEx3HEXAGON.apk
+rm -rf product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON/HotwordEnrollmentOKGoogleEx3HEXAGON.apk.prof
+rm -rf product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON
+rm -rf product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON/HotwordEnrollmentXGoogleEx3HEXAGON.apk
+rm -rf product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON/HotwordEnrollmentXGoogleEx3HEXAGON.apk.prof
+rm -rf product/priv-app/PrivateComputeServices
+rm -rf product/priv-app/PrivateComputeServices/PrivateComputeServices.apk
+rm -rf product/priv-app/PrivateComputeServices/PrivateComputeServices.apk.prof
+rm -rf product/app/com.google.mainline.adservices
+rm -rf product/app/com.google.mainline.adservices/com.google.mainline.adservices.apk
+rm -rf product/priv-app/AndroidSystemIntelligence
+rm -rf product/priv-app/AndroidSystemIntelligence/AndroidSystemIntelligence.apk
+rm -rf product/priv-app/AndroidSystemIntelligence/AndroidSystemIntelligence.apk.prof
+rm -rf product/priv-app/FamilyLinkParentalControls
+rm -rf product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk
+rm -rf product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk.prof
+#DEBLOAT FOR MOTOUI CN
 rm -rf priv-app/Bug2GoStub
 rm -rf priv-app/Bug2GoStub/Bug2GoStub.apk
 rm -rf priv-app/BuiltInPrintService
