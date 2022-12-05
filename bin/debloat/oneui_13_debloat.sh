@@ -745,129 +745,129 @@ rm -rf system/priv-app/knoxvpnproxyhandler
 rm -rf system/priv-app/knoxvpnproxyhandler/knoxvpnproxyhandler.apk
 rm -rf system/priv-app/knoxvpnproxyhandler/knoxvpnproxyhandler.apk.prof
 # DEBLOAT DO M52
-rm -rf system/app/BixbyWakeup
-rm -rf system/app/BixbyWakeup/BixbyWakeup.apk
-rm -rf system/app/BixbyWakeup/BixbyWakeup.apk.prof
-rm -rf system/app/BlockchainBasicKit
-rm -rf system/app/BlockchainBasicKit/BlockchainBasicKit.apk
-rm -rf system/app/BluetoothAgent
-rm -rf system/app/BluetoothAgent/BluetoothAgent.apk
-rm -rf system/app/BluetoothAgent/BluetoothAgent.apk.prof
-rm -rf system/app/BluetoothMidiService
-rm -rf system/app/BluetoothMidiService/BluetoothMidiService.apk
-rm -rf system/app/BluetoothMidiService/BluetoothMidiService.apk.prof
-rm -rf system/app/ChromeCustomizations
-rm -rf system/app/ChromeCustomizations/ChromeCustomizations.apk
-rm -rf system/app/ChromeCustomizations/ChromeCustomizations.apk.prof
-rm -rf system/app/ContainerService
-rm -rf system/app/ContainerService/ContainerService.apk
-rm -rf system/app/ContainerService/ContainerService.apk.prof
-rm -rf system/app/Foundation
-rm -rf system/app/Foundation/Foundation.apk
-rm -rf system/app/Foundation/Foundation.apk.prof
-rm -rf system/app/GalaxyResourceUpdater
-rm -rf system/app/GalaxyResourceUpdater/GalaxyResourceUpdater.apk
-rm -rf system/app/GalaxyResourceUpdater/GalaxyResourceUpdater.apk.prof
-rm -rf system/app/MdecService
-rm -rf system/app/MdecService/MdecService.apk
-rm -rf system/app/MinusOnePage
-rm -rf system/app/MinusOnePage/MinusOnePage.apk
-rm -rf system/app/MinusOnePage/MinusOnePage.apk.prof
-rm -rf system/app/OCRDataProvider
-rm -rf system/app/OCRDataProvider/OCRDataProvider.apk
-rm -rf system/app/OCRDataProvider/OCRDataProvider.apk.prof
-rm -rf system/app/PlayAutoInstallConfig
-rm -rf system/app/PlayAutoInstallConfig/PlayAutoInstallConfig.apk
-rm -rf system/app/SilentLog
-rm -rf system/app/SilentLog/SilentLog.apk
-rm -rf system/app/SilentLog/SilentLog.apk.prof
-rm -rf system/app/SmartTethering
-rm -rf system/app/SmartTethering/SmartTethering.apk
-rm -rf system/app/SmartTethering/SmartTethering.apk.prof
-rm -rf system/app/StickerCenter
-rm -rf system/app/StickerCenter/StickerCenter.apk
-rm -rf system/app/StickerCenter/StickerCenter.apk.prof
-rm -rf system/app/UnifiedWFC
-rm -rf system/app/UnifiedWFC/UnifiedWFC.apk
-rm -rf system/app/UnifiedWFC/UnifiedWFC.apk.prof
-rm -rf system/app/VideoEditorLite_Dream_N
-rm -rf system/app/VideoEditorLite_Dream_N/VideoEditorLite_Dream_N.apk
-rm -rf system/app/VisionIntelligence3.7
-rm -rf system/app/VisionIntelligence3.7/VisionIntelligence3.7.apk
-rm -rf system/app/VisionIntelligence3.7/VisionIntelligence3.7.apk.prof
-rm -rf system/app/ccinfo
-rm -rf system/app/ccinfo/ccinfo.apk
-rm -rf system/app/ccinfo/ccinfo.apk.prof
-rm -rf system/app/embms_sec
-rm -rf system/app/embms_sec/embms_sec.apk
-rm -rf system/app/embms_sec/embms_sec.apk.prof
-rm -rf system/priv-app/AODService_v80
-rm -rf system/priv-app/AODService_v80/AODService_v80.apk
-rm -rf system/priv-app/AREmojiEditor
-rm -rf system/priv-app/AREmojiEditor/AREmojiEditor.apk
-rm -rf system/priv-app/AREmojiEditor/AREmojiEditor.apk.prof
-rm -rf system/priv-app/AvatarEmojiSticker
-rm -rf system/priv-app/AvatarEmojiSticker/AvatarEmojiSticker.apk
-rm -rf system/priv-app/Bixby
-rm -rf system/priv-app/Bixby/Bixby.apk
-rm -rf system/priv-app/Bixby/Bixby.apk.prof
-rm -rf system/priv-app/BixbyVisionFramework3.5
-rm -rf system/priv-app/BixbyVisionFramework3.5/BixbyVisionFramework3.5.apk
-rm -rf system/priv-app/BixbyVisionFramework3.5/BixbyVisionFramework3.5.apk.prof
-rm -rf system/priv-app/CallBGProvider
-rm -rf system/priv-app/CallBGProvider/CallBGProvider.apk
-rm -rf system/priv-app/CallBGProvider/CallBGProvider.apk.prof
-rm -rf system/priv-app/FacAtFunction
-rm -rf system/priv-app/FacAtFunction/FacAtFunction.apk
-rm -rf system/priv-app/FacAtFunction/FacAtFunction.apk.prof
-rm -rf system/priv-app/FactoryTestProvider
-rm -rf system/priv-app/FactoryTestProvider/FactoryTestProvider.apk
-rm -rf system/priv-app/FactoryTestProvider/FactoryTestProvider.apk.prof
-rm -rf system/priv-app/GpuWatchApp
-rm -rf system/priv-app/GpuWatchApp/GpuWatchApp.apk
-rm -rf system/priv-app/GpuWatchApp/GpuWatchApp.apk.prof
-rm -rf system/priv-app/GpuWatchApp/lib
-rm -rf system/priv-app/GpuWatchApp/lib/arm64
-rm -rf system/priv-app/GpuWatchApp/lib/arm64/libgpustat.so
-rm -rf system/priv-app/GpuWatchApp/lib/arm64/libsysinfo.so
-rm -rf system/priv-app/HashTagService
-rm -rf system/priv-app/HashTagService/HashTagService.apk
-rm -rf system/priv-app/HashTagService/HashTagService.apk.prof
-rm -rf system/priv-app/IpsGeofence
-rm -rf system/priv-app/IpsGeofence/IpsGeofence.apk
-rm -rf system/priv-app/NetworkDiagnostic
-rm -rf system/priv-app/NetworkDiagnostic/NetworkDiagnostic.apk
-rm -rf system/priv-app/PhotoRemasterService
-rm -rf system/priv-app/PhotoRemasterService/PhotoRemasterService.apk
-rm -rf system/priv-app/PhotoRemasterService/PhotoRemasterService.apk.prof
-rm -rf system/priv-app/SPPPushClient
-rm -rf system/priv-app/SPPPushClient/SPPPushClient.apk
-rm -rf system/priv-app/SPPPushClient/SPPPushClient.apk.prof
-rm -rf system/priv-app/SVoiceIME
-rm -rf system/priv-app/SVoiceIME/SVoiceIME.apk
-rm -rf system/priv-app/SamsungCalendarProvider
-rm -rf system/priv-app/SamsungCalendarProvider/SamsungCalendarProvider.apk
-rm -rf system/priv-app/SamsungCalendarProvider/SamsungCalendarProvider.apk.prof
-rm -rf system/priv-app/SingleTakeService
-rm -rf system/priv-app/SingleTakeService/SingleTakeService.apk
-rm -rf system/priv-app/SmartTouchCall
-rm -rf system/priv-app/SmartTouchCall/SmartTouchCall.apk
-rm -rf system/priv-app/SmartTouchCall/SmartTouchCall.apk.prof
-rm -rf system/priv-app/SohService
-rm -rf system/priv-app/SohService/SohService.apk
-rm -rf system/priv-app/SohService/SohService.apk.prof
-rm -rf system/priv-app/StickerFaceARAvatar
-rm -rf system/priv-app/StickerFaceARAvatar/StickerFaceARAvatar.apk
-rm -rf system/priv-app/StickerFaceARAvatar/StickerFaceARAvatar.apk.prof
-rm -rf system/priv-app/SumeNNService
-rm -rf system/priv-app/SumeNNService/SumeNNService.apk
-rm -rf system/priv-app/SumeNNService/SumeNNService.apk.prof
-rm -rf system/priv-app/VolumeMonitorProvider_T
-rm -rf system/priv-app/VolumeMonitorProvider_T/VolumeMonitorProvider_T.apk
-rm -rf system/priv-app/VolumeMonitorProvider_T/VolumeMonitorProvider_T.apk.prof
-rm -rf system/priv-app/serviceModeApp_FB
-rm -rf system/priv-app/serviceModeApp_FB/serviceModeApp_FB.apk
-rm -rf system/priv-app/serviceModeApp_FB/serviceModeApp_FB.apk.prof
-rm -rf system/priv-app/sec_camerax_service
-rm -rf system/priv-app/sec_camerax_service/sec_camerax_service.apk
-rm -rf system/priv-app/sec_camerax_service/sec_camerax_service.apk.prof
+# rm -rf system/app/BixbyWakeup
+# rm -rf system/app/BixbyWakeup/BixbyWakeup.apk
+# rm -rf system/app/BixbyWakeup/BixbyWakeup.apk.prof
+# rm -rf system/app/BlockchainBasicKit
+# rm -rf system/app/BlockchainBasicKit/BlockchainBasicKit.apk
+# rm -rf system/app/BluetoothAgent
+# rm -rf system/app/BluetoothAgent/BluetoothAgent.apk
+# rm -rf system/app/BluetoothAgent/BluetoothAgent.apk.prof
+# rm -rf system/app/BluetoothMidiService
+# rm -rf system/app/BluetoothMidiService/BluetoothMidiService.apk
+# rm -rf system/app/BluetoothMidiService/BluetoothMidiService.apk.prof
+# rm -rf system/app/ChromeCustomizations
+# rm -rf system/app/ChromeCustomizations/ChromeCustomizations.apk
+# rm -rf system/app/ChromeCustomizations/ChromeCustomizations.apk.prof
+# rm -rf system/app/ContainerService
+# rm -rf system/app/ContainerService/ContainerService.apk
+# rm -rf system/app/ContainerService/ContainerService.apk.prof
+# rm -rf system/app/Foundation
+# rm -rf system/app/Foundation/Foundation.apk
+# rm -rf system/app/Foundation/Foundation.apk.prof
+# rm -rf system/app/GalaxyResourceUpdater
+# rm -rf system/app/GalaxyResourceUpdater/GalaxyResourceUpdater.apk
+# rm -rf system/app/GalaxyResourceUpdater/GalaxyResourceUpdater.apk.prof
+# rm -rf system/app/MdecService
+# rm -rf system/app/MdecService/MdecService.apk
+# rm -rf system/app/MinusOnePage
+# rm -rf system/app/MinusOnePage/MinusOnePage.apk
+# rm -rf system/app/MinusOnePage/MinusOnePage.apk.prof
+# rm -rf system/app/OCRDataProvider
+# rm -rf system/app/OCRDataProvider/OCRDataProvider.apk
+# rm -rf system/app/OCRDataProvider/OCRDataProvider.apk.prof
+# rm -rf system/app/PlayAutoInstallConfig
+# rm -rf system/app/PlayAutoInstallConfig/PlayAutoInstallConfig.apk
+# rm -rf system/app/SilentLog
+# rm -rf system/app/SilentLog/SilentLog.apk
+# rm -rf system/app/SilentLog/SilentLog.apk.prof
+# rm -rf system/app/SmartTethering
+# rm -rf system/app/SmartTethering/SmartTethering.apk
+# rm -rf system/app/SmartTethering/SmartTethering.apk.prof
+# rm -rf system/app/StickerCenter
+# rm -rf system/app/StickerCenter/StickerCenter.apk
+# rm -rf system/app/StickerCenter/StickerCenter.apk.prof
+# rm -rf system/app/UnifiedWFC
+# rm -rf system/app/UnifiedWFC/UnifiedWFC.apk
+# rm -rf system/app/UnifiedWFC/UnifiedWFC.apk.prof
+# rm -rf system/app/VideoEditorLite_Dream_N
+# rm -rf system/app/VideoEditorLite_Dream_N/VideoEditorLite_Dream_N.apk
+# rm -rf system/app/VisionIntelligence3.7
+# rm -rf system/app/VisionIntelligence3.7/VisionIntelligence3.7.apk
+# rm -rf system/app/VisionIntelligence3.7/VisionIntelligence3.7.apk.prof
+# rm -rf system/app/ccinfo
+# rm -rf system/app/ccinfo/ccinfo.apk
+# rm -rf system/app/ccinfo/ccinfo.apk.prof
+# rm -rf system/app/embms_sec
+# rm -rf system/app/embms_sec/embms_sec.apk
+# rm -rf system/app/embms_sec/embms_sec.apk.prof
+# rm -rf system/priv-app/AODService_v80
+# rm -rf system/priv-app/AODService_v80/AODService_v80.apk
+# rm -rf system/priv-app/AREmojiEditor
+# rm -rf system/priv-app/AREmojiEditor/AREmojiEditor.apk
+# rm -rf system/priv-app/AREmojiEditor/AREmojiEditor.apk.prof
+# rm -rf system/priv-app/AvatarEmojiSticker
+# rm -rf system/priv-app/AvatarEmojiSticker/AvatarEmojiSticker.apk
+# rm -rf system/priv-app/Bixby
+# rm -rf system/priv-app/Bixby/Bixby.apk
+# rm -rf system/priv-app/Bixby/Bixby.apk.prof
+# rm -rf system/priv-app/BixbyVisionFramework3.5
+# rm -rf system/priv-app/BixbyVisionFramework3.5/BixbyVisionFramework3.5.apk
+# rm -rf system/priv-app/BixbyVisionFramework3.5/BixbyVisionFramework3.5.apk.prof
+# rm -rf system/priv-app/CallBGProvider
+# rm -rf system/priv-app/CallBGProvider/CallBGProvider.apk
+# rm -rf system/priv-app/CallBGProvider/CallBGProvider.apk.prof
+# rm -rf system/priv-app/FacAtFunction
+# rm -rf system/priv-app/FacAtFunction/FacAtFunction.apk
+# rm -rf system/priv-app/FacAtFunction/FacAtFunction.apk.prof
+# rm -rf system/priv-app/FactoryTestProvider
+# rm -rf system/priv-app/FactoryTestProvider/FactoryTestProvider.apk
+# rm -rf system/priv-app/FactoryTestProvider/FactoryTestProvider.apk.prof
+# rm -rf system/priv-app/GpuWatchApp
+# rm -rf system/priv-app/GpuWatchApp/GpuWatchApp.apk
+# rm -rf system/priv-app/GpuWatchApp/GpuWatchApp.apk.prof
+# rm -rf system/priv-app/GpuWatchApp/lib
+# rm -rf system/priv-app/GpuWatchApp/lib/arm64
+# rm -rf system/priv-app/GpuWatchApp/lib/arm64/libgpustat.so
+# rm -rf system/priv-app/GpuWatchApp/lib/arm64/libsysinfo.so
+# rm -rf system/priv-app/HashTagService
+# rm -rf system/priv-app/HashTagService/HashTagService.apk
+# rm -rf system/priv-app/HashTagService/HashTagService.apk.prof
+# rm -rf system/priv-app/IpsGeofence
+# rm -rf system/priv-app/IpsGeofence/IpsGeofence.apk
+# rm -rf system/priv-app/NetworkDiagnostic
+# rm -rf system/priv-app/NetworkDiagnostic/NetworkDiagnostic.apk
+# rm -rf system/priv-app/PhotoRemasterService
+# rm -rf system/priv-app/PhotoRemasterService/PhotoRemasterService.apk
+# rm -rf system/priv-app/PhotoRemasterService/PhotoRemasterService.apk.prof
+# rm -rf system/priv-app/SPPPushClient
+# rm -rf system/priv-app/SPPPushClient/SPPPushClient.apk
+# rm -rf system/priv-app/SPPPushClient/SPPPushClient.apk.prof
+# rm -rf system/priv-app/SVoiceIME
+# rm -rf system/priv-app/SVoiceIME/SVoiceIME.apk
+# rm -rf system/priv-app/SamsungCalendarProvider
+# rm -rf system/priv-app/SamsungCalendarProvider/SamsungCalendarProvider.apk
+# rm -rf system/priv-app/SamsungCalendarProvider/SamsungCalendarProvider.apk.prof
+# rm -rf system/priv-app/SingleTakeService
+# rm -rf system/priv-app/SingleTakeService/SingleTakeService.apk
+# rm -rf system/priv-app/SmartTouchCall
+# rm -rf system/priv-app/SmartTouchCall/SmartTouchCall.apk
+# rm -rf system/priv-app/SmartTouchCall/SmartTouchCall.apk.prof
+# rm -rf system/priv-app/SohService
+# rm -rf system/priv-app/SohService/SohService.apk
+# rm -rf system/priv-app/SohService/SohService.apk.prof
+# rm -rf system/priv-app/StickerFaceARAvatar
+# rm -rf system/priv-app/StickerFaceARAvatar/StickerFaceARAvatar.apk
+# rm -rf system/priv-app/StickerFaceARAvatar/StickerFaceARAvatar.apk.prof
+# rm -rf system/priv-app/SumeNNService
+# rm -rf system/priv-app/SumeNNService/SumeNNService.apk
+# rm -rf system/priv-app/SumeNNService/SumeNNService.apk.prof
+# rm -rf system/priv-app/VolumeMonitorProvider_T
+# rm -rf system/priv-app/VolumeMonitorProvider_T/VolumeMonitorProvider_T.apk
+# rm -rf system/priv-app/VolumeMonitorProvider_T/VolumeMonitorProvider_T.apk.prof
+# rm -rf system/priv-app/serviceModeApp_FB
+# rm -rf system/priv-app/serviceModeApp_FB/serviceModeApp_FB.apk
+# rm -rf system/priv-app/serviceModeApp_FB/serviceModeApp_FB.apk.prof
+# rm -rf system/priv-app/sec_camerax_service
+# rm -rf system/priv-app/sec_camerax_service/sec_camerax_service.apk
+# rm -rf system/priv-app/sec_camerax_service/sec_camerax_service.apk.prof

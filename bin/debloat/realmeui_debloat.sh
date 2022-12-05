@@ -2490,4 +2490,51 @@ rm -rf system/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 rm -rf system/system_ext/priv-app/dpmserviceapp/oat
 rm -rf system/system_ext/priv-app/dpmserviceapp/oat/arm64
 rm -rf system/system_ext/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.odex
+rm -rf system/system_ext/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.vdexrm -rf my_bigball/app/AssistantScreen
+rm -rf my_heytap/app/ARCore
+rm -rf my_heytap/app/ARCore/ARCore.apk
+rm -rf my_heytap/app/Chrome
+rm -rf my_heytap/app/Chrome/Chrome.apk
+rm -rf my_heytap/app/TrichromeLibrary/TrichromeLibrary.apk
+rm -rf my_heytap/app/TrichromeLibrary/oat
+rm -rf my_heytap/app/TrichromeLibrary/oat/arm
+rm -rf my_heytap/app/TrichromeLibrary/oat/arm/TrichromeLibrary.vdex
+rm -rf my_heytap/app/TrichromeLibrary/oat/arm64
+rm -rf my_heytap/app/TrichromeLibrary/oat/arm64/TrichromeLibrary.vdex
+rm -rf my_heytap/app/WebViewGoogle
+rm -rf my_heytap/app/WebViewGoogle/WebViewGoogle.apk
+# rm -rf my_heytap/priv-app/GmsCore
+# rm -rf my_heytap/priv-app/GmsCore/GmsCore.apk
+# rm -rf my_heytap/priv-app/GmsCore/m
+# rm -rf my_heytap/priv-app/GmsCore/m/independent
+# rm -rf my_heytap/priv-app/GmsCore/m/independent/AndroidPlatformServices.apk
+# rm -rf my_heytap/priv-app/GmsCore/m/independent/oat
+# rm -rf my_heytap/priv-app/GmsCore/m/independent/oat/arm64
+# rm -rf my_heytap/priv-app/GmsCore/m/independent/oat/arm64/AndroidPlatformServices.vdex
+# rm -rf my_heytap/priv-app/GmsCore/oat
+# rm -rf my_heytap/priv-app/GmsCore/oat/arm
+# rm -rf my_heytap/priv-app/GmsCore/oat/arm/GmsCore.vdex
+# rm -rf my_heytap/priv-app/GmsCore/oat/arm64
+# rm -rf my_heytap/priv-app/GmsCore/oat/arm64/GmsCore.vdex
+rm -rf my_stock/app/Games
+rm -rf my_stock/app/Games/Games.apk
+rm -rf my_stock/app/Games/oat
+rm -rf my_stock/app/Games/oat/arm64
+rm -rf my_stock/app/Games/oat/arm64/Games.vdex
+rm -rf odm/etc/init/init.camera_upate.rc
+rm -rf odm/etc/init/init.multimedia.rc
+rm -rf odm/etc/media_codecs_odm.xml
+rm -rf odm/etc/media_codecs_vendor_oplus.xml
+rm -rf odm/etc/multimedia_feature_switch.xml
+rm -rf odm/etc/permissions/android.hardware.camera.flash-autofocus.xml
+rm -rf odm/lib/mediadrm
+rm -rf odm/lib/mediadrm/libwvdrmengine.so
+rm -rf odm/lib64/mediadrm
+rm -rf odm/lib64/mediadrm/libwvdrmengine.so
+rm -rf system/system_ext/app/NfcNci
+rm -rf system/system_ext/app/NfcNci/NfcNci.apk
+rm -rf system/system_ext/app/NfcNci/oat
+rm -rf system/system_ext/app/NfcNci/oat/arm64
+rm -rf system/system_ext/app/NfcNci/oat/arm64/NfcNci.odex
+rm -rf system/system_ext/app/NfcNci/oat/arm64/NfcNci.vdex
 rm -rf system/system_ext/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.vdex
