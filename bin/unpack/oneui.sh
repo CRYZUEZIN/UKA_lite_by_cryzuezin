@@ -114,6 +114,7 @@ sed -i "s+ro.config.knox.ucm=1+#+" $editor/system/system/build.prop
 sed -i "s+security.perf_harden=1+security.perf_harden=false+" $editor/system/system/build.prop
 sed -i "s+ro.adb.secure=1+ro.adb.secure=0+" $editor/system/system/build.prop
 cat $phh/fix.prop >> $editor/system/system/build.prop
+cat $phh/phh_file_contexts >> $editor/config/system/system_file_contexts
 echo " "
 
 python3 $pybin/imgextractor.py $tmp/product.img $editor
@@ -188,9 +189,6 @@ rm -rf $tmp
 mkdir -p $tmp
 
 if [ -d $editor/system/system/priv-app/AODService_v70 ]; then
-rm -rf $editor/config/system/system_file_contexts
-cp $contexts/oneui_12_contexts $editor/config/system
-cd $editor/config/system && mv oneui_12_contexts system_file_contexts
 cat $config/oneui_12_config >> $editor/config/system/system_fs_config
 
 echo "- Doing Debloat, set it in $debloat"; sleep 5
@@ -199,9 +197,6 @@ cd $editor/system && sh $debloat/oneui_12_debloat.sh
 echo " "
 
 else
-rm -rf $editor/config/system/system_file_contexts
-cp $contexts/oneui_13_contexts $editor/config/system
-cd $editor/config/system && mv oneui_13_contexts system_file_contexts
 cat $config/oneui_13_config >> $editor/config/system/system_fs_config
 
 echo "- Doing Debloat, set it in $debloat"; sleep 5
