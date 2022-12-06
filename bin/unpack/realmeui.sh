@@ -109,11 +109,12 @@ sed -i "s+ro.actionable_compatible_property.enabled=true+#+" $tmp/system/system/
 sed -i "s+ro.build.selinux=1+ro.build.selinux=0+" $tmp/system/system/build.prop
 sed -i "s+ro.config.knox=v30+#+" $tmp/system/system/build.prop
 sed -i "s+ro.config.dmverity=G+ro.config.dmverity=false+" $tmp/system/system/build.prop
+sed -i "s+ro.config.dmverity=N+ro.config.dmverity=false+" $tmp/system/system/build.prop
 sed -i "s+ro.config.knox.ucm=1+#+" $tmp/system/system/build.prop
 sed -i "s+security.perf_harden=1+security.perf_harden=false+" $tmp/system/system/build.prop
 sed -i "s+ro.adb.secure=1+ro.adb.secure=0+" $tmp/system/system/build.prop
 cat $phh/fix.prop >> $tmp/system/system/build.prop
-cat $phh/phh_file_contexts >> $tmp/config/system_file_contexts
+cat $phh/phh_file_contexts >> $tmp/config/system/system_file_contexts
 echo " "
 
 python3 $pybin/imgextractor.py $tmp/product.img $tmp
