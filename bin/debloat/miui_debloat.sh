@@ -22,6 +22,7 @@ rm -rf priv-app/knoxanalyticsagent
 rm -rf priv-app/KnoxGuard
 rm -rf priv-app/KnoxCore
 rm -rf priv-app/knoxvpnproxyhandler
+# rm -priv-app/KnoxPushManager
 rm -rf priv-app/SDMConfig
 rm -rf priv-app/SetupIndiaServicesTnC
 rm -rf product/priv-app/Messages
