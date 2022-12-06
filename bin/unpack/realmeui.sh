@@ -114,7 +114,7 @@ sed -i "s+ro.config.knox.ucm=1+#+" $tmp/system/system/build.prop
 sed -i "s+security.perf_harden=1+security.perf_harden=false+" $tmp/system/system/build.prop
 sed -i "s+ro.adb.secure=1+ro.adb.secure=0+" $tmp/system/system/build.prop
 cat $phh/fix.prop >> $tmp/system/system/build.prop
-cat $phh/phh_file_contexts >> $tmp/config/system/system_file_contexts
+cat $phh/phh_file_contexts >> $tmp/config/system_file_contexts
 echo " "
 
 python3 $pybin/imgextractor.py $tmp/product.img $tmp
