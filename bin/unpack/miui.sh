@@ -141,6 +141,7 @@ sed -i "s+ro.actionable_compatible_property.enabled=true+#+" $editor/system/syst
 sed -i "s+ro.build.selinux=1+ro.build.selinux=0+" $editor/system/system/build.prop
 sed -i "s+ro.config.knox=v30+#+" $editor/system/system/build.prop
 sed -i "s+ro.config.dmverity=G+ro.config.dmverity=false+" $editor/system/system/build.prop
+sed -i "s+ro.config.dmverity=N+ro.config.dmverity=false+" $editor/system/system/build.prop
 sed -i "s+ro.config.knox.ucm=1+#+" $editor/system/system/build.prop
 sed -i "s+security.perf_harden=1+security.perf_harden=false+" $editor/system/system/build.prop
 sed -i "s+ro.adb.secure=1+ro.adb.secure=0+" $editor/system/system/build.prop
