@@ -96,11 +96,11 @@ rm -rf system/etc/permissions/securelock.xml
 rm -rf system/etc/sysconfig/facebook-hiddenapi-package-whitelist.xml
 rm -rf system/product/etc/permissions/privapp-permissions-provision.xml
 #DEBLOAT FOR CRYZUEZIN (ONE UI)
-# rm -rf system/priv-app/knoxanalyticsagent
+rm -rf system/priv-app/knoxanalyticsagent
 rm -rf system/priv-app/KnoxGuard
-# rm -rf system/priv-app/KnoxCore
-# rm -rf system/priv-app/knoxvpnproxyhandler
-# rm -rf system/priv-app/KnoxPushManager
+rm -rf system/priv-app/KnoxCore
+rm -rf system/priv-app/knoxvpnproxyhandler
+rm -rf system/priv-app/KnoxPushManager
 rm -rf system/priv-app/SDMConfig
 rm -rf system/priv-app/SetupIndiaServicesTnC
 rm -rf system/product/priv-app/Messages
