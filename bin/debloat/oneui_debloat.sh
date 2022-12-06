@@ -9,6 +9,7 @@ rm -rf system/etc/init/update_verifier.rc
 rm -rf prism/app
 rm -rf prism/priv-app
 rm -rf prism/preload
+rm -rf prism/sipdb/SwiftKey/as
 rm -rf prism/sipdb/SwiftKey/bn
 rm -rf prism/sipdb/SwiftKey/en_gb
 rm -rf prism/sipdb/SwiftKey/en_in
