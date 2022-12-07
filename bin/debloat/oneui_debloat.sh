@@ -260,7 +260,7 @@ rm -rf system/product/priv-app/AndroidSystemIntelligence/AndroidSystemIntelligen
 rm -rf system/product/priv-app/FamilyLinkParentalControls
 rm -rf system/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk
 rm -rf system/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk.prof
-# DEBLOAT FOR ONEUI 4.1
+# DEBLOAT FOR ONEUI 4.1 & 5.0
 rm -rf system/app/AASAservice
 rm -rf system/app/AASAservice/AASAservice.apk
 rm -rf system/app/AASAservice/AASAservice.apk.prof
@@ -897,7 +897,6 @@ rm -rf system/priv-app/VolumeMonitorProvider_S/VolumeMonitorProvider_S.apk.prof
 rm -rf system/priv-app/YourPhone_P1_5
 rm -rf system/priv-app/YourPhone_P1_5/YourPhone_P1_5.apk
 rm -rf system/priv-app/YourPhone_P1_5/YourPhone_P1_5.apk.prof
-#DEBLOAT FOR ONEUI 5.0
 rm -rf system/app/BluetoothAgent
 rm -rf system/app/BluetoothAgent/BluetoothAgent.apk
 rm -rf system/app/BluetoothAgent/BluetoothAgent.apk.prof
