@@ -1831,8 +1831,9 @@ rm -rf system/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 rm -rf system/system_ext/priv-app/dpmserviceapp/oat
 rm -rf system/system_ext/priv-app/dpmserviceapp/oat/arm64
 rm -rf system/system_ext/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.odex
-rm -rf system/system_ext/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.vdexrm -rf my_bigball/app/AssistantScreen
+rm -rf system/system_ext/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.vdex
 #DEBLOAT FOR REALMEUI (REALME 9 PRO 5G)
+rm -rf my_bigball/app/AssistantScreen
 rm -rf my_bigball/app/Browser
 rm -rf my_bigball/app/Browser/Browser.apk
 rm -rf my_bigball/app/CalendarGoogle
