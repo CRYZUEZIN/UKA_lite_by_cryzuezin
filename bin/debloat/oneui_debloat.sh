@@ -960,3 +960,26 @@ rm -rf system/priv-app/SoundAlive_T/SoundAlive_T.apk.prof
 rm -rf system/priv-app/VolumeMonitorProvider_T
 rm -rf system/priv-app/VolumeMonitorProvider_T/VolumeMonitorProvider_T.apk
 rm -rf system/priv-app/VolumeMonitorProvider_T/VolumeMonitorProvider_T.apk.prof
+# DEBLOAT FOR ONEUI CORE 4.1
+rm -rf system/app/AASAservice
+rm -rf system/app/FactoryAPP_O6
+rm -rf system/app/FactoryAPP_O6/FactoryAPP_O6.apk
+rm -rf system/app/FactoryAPP_O6/FactoryAPP_O6.apk.prof
+rm -rf system/app/MotionPhotoViewer
+rm -rf system/app/MotionPhotoViewer/MotionPhotoViewer.apk
+rm -rf system/app/MotionPhotoViewer/MotionPhotoViewer.apk.prof
+rm -rf system/app/SamSungStikcerSource
+rm -rf system/app/SamSungStikcerSource/SamSungStikcerSource.apk
+rm -rf system/app/SamsungTTS_no_vdata
+rm -rf system/app/SamsungTTS_no_vdata/SamsungTTS_no_vdata.apk
+rm -rf system/app/SamsungTTS_no_vdata/SamsungTTS_no_vdata.apk.prof
+rm -rf system/priv-app/HybridRadio
+rm -rf system/priv-app/HybridRadio/HybridRadio.apk
+rm -rf system/priv-app/HybridRadio/HybridRadio.apk.prof
+rm -rf system/priv-app/PhotoEditor_Lite32
+rm -rf system/priv-app/PhotoEditor_Lite32/PhotoEditor_Lite32.apk
+rm -rf system/priv-app/SamSungCamera
+rm -rf system/priv-app/SamSungCamera/SamSungCamera.apk
+rm -rf system/priv-app/SamsungPayStubMini
+rm -rf system/priv-app/SamsungPayStubMini/SamsungPayStubMini.apk
+rm -rf system/priv-app/SamsungPayStubMini/SamsungPayStubMini.apk.prof
