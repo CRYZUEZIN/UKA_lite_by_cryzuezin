@@ -385,6 +385,7 @@ rm -rf product/priv-app/EuiccGoogle/oat
 rm -rf product/priv-app/EuiccGoogle/oat/arm64
 rm -rf product/priv-app/EuiccGoogle/oat/arm64/EuiccGoogle.odex
 rm -rf product/priv-app/EuiccGoogle/oat/arm64/EuiccGoogle.vdex
+rm -rf product/priv-app/FMPlayer
 rm -rf product/priv-app/GameMode
 rm -rf product/priv-app/GameMode/GameMode.apk
 rm -rf product/priv-app/GameMode/oat
